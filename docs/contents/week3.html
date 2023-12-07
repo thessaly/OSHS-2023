@@ -1,0 +1,641 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>3. Collaboration in OSH &#8212; Open Source Hardware Seminar @TU Berlin 2023</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=5b4479735964841361fd" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=5b4479735964841361fd" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=5b4479735964841361fd" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd" />
+  <script src="../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=5b4479735964841361fd"></script>
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'contents/week3';</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="4. OSH workflows and tools" href="week4.html" />
+    <link rel="prev" title="2. Ideation and prototyping" href="week2.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="../intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/logo.png" class="logo__image only-light" alt="Open Source Hardware Seminar @TU Berlin 2023 - Home"/>
+    <script>document.write(`<img src="../_static/logo.png" class="logo__image only-dark" alt="Open Source Hardware Seminar @TU Berlin 2023 - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../intro.html">
+                    Open Source Hardware Seminar
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="week1.html">1. Introduction to OSH</a></li>
+<li class="toctree-l1"><a class="reference internal" href="week2.html">2. Ideation and prototyping</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">3. Collaboration in OSH</a></li>
+<li class="toctree-l1"><a class="reference internal" href="week4.html">4. OSH workflows and tools</a></li>
+<li class="toctree-l1"><a class="reference internal" href="week5.html">5. Documenting for reuse</a></li>
+<li class="toctree-l1"><a class="reference internal" href="week6.html">6. Licences &amp; standards</a></li>
+<li class="toctree-l1"><a class="reference internal" href="week7.html">7. Emerging business models</a></li>
+<li class="toctree-l1"><a class="reference internal" href="week8.html">8. OSH communities &amp; governance</a></li>
+<li class="toctree-l1"><a class="reference internal" href="week9.html">Suggested activities &amp; evaluation</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/thesaly/OSHS-2023" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/thesaly/OSHS-2023/issues/new?title=Issue%20on%20page%20%2Fcontents/week3.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/contents/week3.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>3. Collaboration in OSH</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#clarifying-terms">Clarifying terms</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#orchestrating-collaboration-in-osh">Orchestrating collaboration in OSH</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#a-process-view-of-osh-collaboration">A process view of OSH collaboration</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#collaboration-in-a-business-context">Collaboration in a business context</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#slides-for-download">Slides for download</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#bibliography">Bibliography</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section id="collaboration-in-osh">
+<h1>3. Collaboration in OSH<a class="headerlink" href="#collaboration-in-osh" title="Permalink to this heading">#</a></h1>
+<figure class="align-default" id="openinnov-fig">
+<a class="reference internal image-reference" href="../_images/16.png"><img alt="../_images/16.png" src="../_images/16.png" style="width: 709.0999999999999px; height: 273.7px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 16 </span><span class="caption-text">How open innovation allows firms to exchange information on R&amp;D with new actors<a class="footnote-reference brackets" href="#footcite-chesbrough2003open" id="id1" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a></span><a class="headerlink" href="#openinnov-fig" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>Collaboration in FOSS seems straightforward: someone downloads a source code, makes modifications and shares them back. But how does this process take place in hardware projects? We can contextualize OSH projects into what Chesbrough calls “Open Innovation”(<a class="reference internal" href="#openinnov-fig"><span class="std std-numref">Fig. 16</span></a>). In his book<a class="footnote-reference brackets" href="#footcite-chesbrough2003open" id="id2" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a>, Chesbrough describes how companies have shifted from so-called closed innovation processes towards a more open way of innovating.</p>
+<p>Traditionally, new business development processes and the marketing of new products took place within the firm boundaries. This process has eroded due to several factors:</p>
+<ul class="simple">
+<li><p>Large amounts of knowledge exist outside the research laboratories of large companies due to increased mobility, collaboration and connectedness.</p></li>
+<li><p>When employees change jobs, they take their knowledge with them, resulting in knowledge flows between firms.</p></li>
+<li><p>Availability of venture capital has increased significantly recently (in the last decades), which makes it possible for good and promising ideas and technologies to be further developed outside the firm, for instance in the form entrepreneurial firms/spin-offs.</p></li>
+<li><p>Other companies in the supply chain, for instance suppliers, play an increasingly important role in the innovation process.</p></li>
+</ul>
+<p>As a result, companies have started to look for other ways to increase the efficiency and effectiveness of their innovation processes. These include actively searching for new technologies and ideas outside of the firm, cooperating with suppliers and competitors to create customer value, or through user innovation.</p>
+<p>Open innovation means combining internal and external ideas, in-bound and out-bound knowledge exchanges as well as internal and external paths to market to advance the development of new technologies/intellectual property.</p>
+<section id="clarifying-terms">
+<h2>Clarifying terms<a class="headerlink" href="#clarifying-terms" title="Permalink to this heading">#</a></h2>
+<p>Since the 70s, people have been given more influence and room for participation within product design and development. Expertise in the informing, ideating, and conceptualising activities in the early design phases (also called the “fuzzy front end of the innovation process”), as well as product validation, were opened up to new actors.</p>
+<div class="tip admonition">
+<p class="admonition-title">Tip</p>
+<p>Although the word “open” appears in many different contexts, it is necessary to introduce a very important distinction. Projects are OSH when they share product designs under free and open licenses. On the other hand, open innovation processes may not necessarily result in open source hardware. Firms can do open innovation and close down the inventions down the line.</p>
+</div>
+<p>“Co-design” is a term related to this process, that can often be found both in literature and practice<a class="footnote-reference brackets" href="#footcite-sanders2008co" id="id3" role="doc-noteref"><span class="fn-bracket">[</span>2<span class="fn-bracket">]</span></a>. By co-design we indicate collective creativity as it is applied across the whole span of a design processes (emphasise on plural form, see <a class="reference internal" href="#collective-fig"><span class="std std-numref">Fig. 17</span></a>). This change emerges from the realization that conventional design approaches cannot address the scale or the complexity of the challenges we face today. We are no longer simply designing products for users. We are designing for the future experiences of people, communities and cultures who now are connected and informed in ways that were unimaginable even 10 years ago.</p>
+<figure class="align-default" id="collective-fig">
+<a class="reference internal image-reference" href="../_images/17.png"><img alt="../_images/17.png" src="../_images/17.png" style="width: 734.3px; height: 328.29999999999995px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 17 </span><span class="caption-text">Involving new actors in the design process<a class="footnote-reference brackets" href="#footcite-sanders2008co" id="id4" role="doc-noteref"><span class="fn-bracket">[</span>2<span class="fn-bracket">]</span></a>.</span><a class="headerlink" href="#collective-fig" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>In co-design, through specific facilitation processes some users become co-designers. Researchers, facilitators and professional designers provide the necessary specialization to move towards production. In theory, OSH goes even beyond co-design, as it can engage external actors in the whole spectrum of activities from concept to design to manufacturing. However this does not happen quite so easily, as we will see later.</p>
+</section>
+<section id="orchestrating-collaboration-in-osh">
+<h2>Orchestrating collaboration in OSH<a class="headerlink" href="#orchestrating-collaboration-in-osh" title="Permalink to this heading">#</a></h2>
+<p>In an open hardware community, the span of collaborative practices is versatile. Similar to free and open source software, OSH work is done in two layers: a core team of developers and a broader layer of contributors (<a class="reference internal" href="#collabprocess-fig"><span class="std std-numref">Fig. 18</span></a>).</p>
+<p>Typical tasks of the core team include defining tasks that are part of the project roadmap, evaluate contributions and validate them to be incorporated to the main project, and control of the “release” versions. A significant amount of work goes into documenting the new contributions as part of the efforts to increase reuse. Naturally, such open collaborative development activities for converging design outcomes can mainly be enabled once shared development goals have been identified and functional prototypes were built and can be shared.</p>
+<figure class="align-default" id="collabprocess-fig">
+<a class="reference internal image-reference" href="../_images/18.png"><img alt="../_images/18.png" src="../_images/18.png" style="width: 529.1999999999999px; height: 307.29999999999995px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 18 </span><span class="caption-text">The open source product development process<a class="footnote-reference brackets" href="#footcite-mies2022collaborative" id="id5" role="doc-noteref"><span class="fn-bracket">[</span>3<span class="fn-bracket">]</span></a>.</span><a class="headerlink" href="#collabprocess-fig" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>Going back to the community practices that are happening already today (<a class="reference internal" href="#collabpractice-fig"><span class="std std-numref">Fig. 19</span></a>), research<a class="footnote-reference brackets" href="#footcite-mies2022collaborative" id="id6" role="doc-noteref"><span class="fn-bracket">[</span>3<span class="fn-bracket">]</span></a> shows that certain practices are already widely established in the community: separation of tasks, distributed contributions and reaching a collective understanding are widely adopted in the OSH field. People also publish their source files, in editable format so others can modify them.</p>
+<p>There are however a number of practices that are known to enable collaboration, but are not widely implemented such as: issue tracking, defining contribution guidelines, sharing between contributions and having the FOSS spirit of do-ocracy that leads people to self-assign tasks. Reviews of contributions and providing feedback are still not widely implemented.</p>
+<p>Clear gaps in practice include actively recruiting contributors, and providing regular updates, agile style. Working towards greater adoption of these practices can make the difference in greater OSH adoption.</p>
+<figure class="align-default" id="collabpractice-fig">
+<a class="reference internal image-reference" href="../_images/19.png"><img alt="../_images/19.png" src="../_images/19.png" style="width: 657.3px; height: 274.4px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 19 </span><span class="caption-text">Degrees of adoption of collaborative practices in OSH <a class="footnote-reference brackets" href="#footcite-mies2022collaborative" id="id7" role="doc-noteref"><span class="fn-bracket">[</span>3<span class="fn-bracket">]</span></a>.</span><a class="headerlink" href="#collabpractice-fig" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+</section>
+<section id="a-process-view-of-osh-collaboration">
+<h2>A process view of OSH collaboration<a class="headerlink" href="#a-process-view-of-osh-collaboration" title="Permalink to this heading">#</a></h2>
+<p>As we have seen in previous units, OSH projects go through different iterative phases that can also be viewed as sets of activities. These include ideation out of a problem or need, prototyping and developing (“design activities”) and then production, use and disposal/end of life of a project<a class="footnote-reference brackets" href="#footcite-boujut2019open" id="id8" role="doc-noteref"><span class="fn-bracket">[</span>4<span class="fn-bracket">]</span></a>. Ideally, participation in these activities is open to multiple actors.</p>
+<p>This poses a practical challenge for OSH projects, as described by Stirling &amp; collaborators<a class="footnote-reference brackets" href="#footcite-stirling2022hardops" id="id9" role="doc-noteref"><span class="fn-bracket">[</span>5<span class="fn-bracket">]</span></a>:</p>
+<blockquote>
+<div><p>A key difficulty for open hardware projects is how to allow multiple designers to simultaneously contribute to a design, and for all contributors to have unfettered access to all of the product data […] For open development, a system is needed which both gives each contributor full control to modify their copy of design, control over which external modifications are merged into their copy of the design, and robust data storage that ensures that each designer’s contributions are adequately recorded. This produces a rich design history, which is essential for issues ranging from design compliance to ownership and licensing agreements.</p>
+<p>[…] The toolchain and workflow for the open-source hardware development is also beginning to standardise. Distributed version control systems such as Git allow distributed teams to work on their own branch of development rather than relying on a traditional PDM. Git-based developer operations (DevOps) platforms such as GitHub and GitLab are seeing an increasing number of hardware projects, and CERN’s Open Hardware Repository (CERN 2021) is also an instance of the open-source GitLab platform. While adopting platforms originally designed for managing software has its drawbacks (Stirling et al. 2020), it also unlocks a number of powerful tools for automating time-consuming processes.</p>
+</div></blockquote>
+<p>How would an automated workflow, similar to the one used in FOSS, work for OSH? <a class="reference internal" href="#hwops-fig"><span class="std std-numref">Fig. 20</span></a> illustrates what a DevOps approach would look like for OSH. In this system, automatically generated production files from designers directly reach production and prototyping teams via the Prepare and Verify stage, and the feedback from production and testing forms the inputs for future plans. This can bridge the gap between the design and production in a large organisation but can also automate enough tasks to allow a very small team to function with high efficiency and reproducibility. This is not happening today; it’s aspirational as some activists work on developing a full open toolchain for OSH<a class="footnote-reference brackets" href="#footcite-stirling2022hardops" id="id10" role="doc-noteref"><span class="fn-bracket">[</span>5<span class="fn-bracket">]</span></a>.</p>
+<figure class="align-default" id="hwops-fig">
+<a class="reference internal image-reference" href="../_images/22.png"><img alt="../_images/22.png" src="../_images/22.png" style="width: 536.1999999999999px; height: 315.7px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 20 </span><span class="caption-text">A DevOps approach to OSH projects <a class="footnote-reference brackets" href="#footcite-stirling2022hardops" id="id11" role="doc-noteref"><span class="fn-bracket">[</span>5<span class="fn-bracket">]</span></a>.</span><a class="headerlink" href="#hwops-fig" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+</section>
+<section id="collaboration-in-a-business-context">
+<h2>Collaboration in a business context<a class="headerlink" href="#collaboration-in-a-business-context" title="Permalink to this heading">#</a></h2>
+<p>Beyond platforms and tools, companies aiming to incorporate OSH as part of their business operations may experience a significant clash of paradigms between their general modus operandi and an open source mindset<a class="footnote-reference brackets" href="#footcite-mies2019harnessing" id="id12" role="doc-noteref"><span class="fn-bracket">[</span>6<span class="fn-bracket">]</span></a>. For example, companies would need to understand that knowledge moves from being secret and exclusive towards a shared resource, and seek the collaborative advantage of this by forging connections with valuable external contributors (<a class="reference internal" href="#companies1-fig"><span class="std std-numref">Fig. 21</span></a>).</p>
+<p>Another major switch implies moving from a globalised mass-production paradigm to a local distributed scale of OSH-enabled manufacturing. Venture capital funds and businesses in general aim to scale processes; however, in OSH the focus should be on producing highly personalised products to reach more users which may also be neglected due to underlying market failures.</p>
+<figure class="align-default" id="companies1-fig">
+<a class="reference internal image-reference" href="../_images/20.png"><img alt="../_images/20.png" src="../_images/20.png" style="width: 640.8000000000001px; height: 324.0px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 21 </span><span class="caption-text">The open source product development process: for companies <a class="footnote-reference brackets" href="#footcite-mies2019harnessing" id="id13" role="doc-noteref"><span class="fn-bracket">[</span>6<span class="fn-bracket">]</span></a>.</span><a class="headerlink" href="#companies1-fig" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>Companies often work in hierarchical, rigid structures where knowledge flows vertically but is not necessarily shared across the organization. In OSH, development works differently, more similar to
+an agile framework: work packages are released early, developers have autonomy and decide how to better work together, and management switches to a coaching more than managing role.</p>
+<p>Working open source also means that errors will be “in the open”, which can be especially tough for companies (as much as this is often claimed to be the case). Treating failure as an integral part of learning and leaving room for emergent processes to take place, for example new directions, is key for companies aiming to adopt OSH (<a class="reference internal" href="#companies2-fig"><span class="std std-numref">Fig. 22</span></a>).</p>
+<figure class="align-default" id="companies2-fig">
+<a class="reference internal image-reference" href="../_images/21.png"><img alt="../_images/21.png" src="../_images/21.png" style="width: 562.0999999999999px; height: 304.5px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 22 </span><span class="caption-text">The open source product development process: for companies (part 2) <a class="footnote-reference brackets" href="#footcite-mies2019harnessing" id="id14" role="doc-noteref"><span class="fn-bracket">[</span>6<span class="fn-bracket">]</span></a>.</span><a class="headerlink" href="#companies2-fig" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>This kind of flexibility combined with the technical capabilities needed is indeed mostly found in mature small and medium enterprises as well as some highly focussed and innovative start-ups. Corporate organisational structures are much more streamlined, so this clash of paradigms can quickly prove to be an unmanageable stretch for them and may require separate operational spheres and structures.</p>
+</section>
+<section id="slides-for-download">
+<h2>Slides for download<a class="headerlink" href="#slides-for-download" title="Permalink to this heading">#</a></h2>
+<p><a class="reference download internal" download="" href="../_downloads/62f217b552fd76da5fe0d64c8019e57f/OSHS_unit4.pdf"><span class="xref download myst">Link to slides</span></a></p>
+</section>
+<section id="bibliography">
+<h2>Bibliography<a class="headerlink" href="#bibliography" title="Permalink to this heading">#</a></h2>
+<div class="docutils container" id="id15">
+<aside class="footnote brackets" id="footcite-chesbrough2003open" role="note">
+<span class="label"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></span>
+<span class="backrefs">(<a role="doc-backlink" href="#id1">1</a>,<a role="doc-backlink" href="#id2">2</a>)</span>
+<p>Henry William Chesbrough. <em>Open innovation: The new imperative for creating and profiting from technology</em>. Harvard Business Press, 2003.</p>
+</aside>
+<aside class="footnote brackets" id="footcite-sanders2008co" role="note">
+<span class="label"><span class="fn-bracket">[</span>2<span class="fn-bracket">]</span></span>
+<span class="backrefs">(<a role="doc-backlink" href="#id3">1</a>,<a role="doc-backlink" href="#id4">2</a>)</span>
+<p>Elizabeth B-N Sanders and Pieter Jan Stappers. Co-creation and the new landscapes of design. <em>Co-design</em>, 4(1):5–18, 2008.</p>
+</aside>
+<aside class="footnote brackets" id="footcite-mies2022collaborative" role="note">
+<span class="label"><span class="fn-bracket">[</span>3<span class="fn-bracket">]</span></span>
+<span class="backrefs">(<a role="doc-backlink" href="#id5">1</a>,<a role="doc-backlink" href="#id6">2</a>,<a role="doc-backlink" href="#id7">3</a>)</span>
+<p>Robert Mies and Jérémy Bonvoisin. Collaborative capacity of open source hardware communities: a cross-sectional study. In <em>2022 IEEE 28th International Conference on Engineering, Technology and Innovation (ICE/ITMC) &amp; 31st International Association For Management of Technology (IAMOT) Joint Conference</em>, 1–9. IEEE, 2022.</p>
+</aside>
+<aside class="footnote brackets" id="footcite-boujut2019open" role="note">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id8">4</a><span class="fn-bracket">]</span></span>
+<p>Jean-François Boujut, Franck Pourroy, Philippe Marin, Jason Dai, and Gilles Richardot. Open source hardware communities: investigating participation in design activities. In <em>Proceedings of the Design Society: International Conference on Engineering Design</em>, volume 1, 2307–2316. Cambridge University Press, 2019.</p>
+</aside>
+<aside class="footnote brackets" id="footcite-stirling2022hardops" role="note">
+<span class="label"><span class="fn-bracket">[</span>5<span class="fn-bracket">]</span></span>
+<span class="backrefs">(<a role="doc-backlink" href="#id9">1</a>,<a role="doc-backlink" href="#id10">2</a>,<a role="doc-backlink" href="#id11">3</a>)</span>
+<p>Julian Stirling, Kaspar Bumke, Joel Collins, Vimal Dhokia, and Richard Bowman. Hardops: utilising the software development toolchain for hardware design. <em>International Journal of Computer Integrated Manufacturing</em>, 35(12):1297–1309, 2022.</p>
+</aside>
+<aside class="footnote brackets" id="footcite-mies2019harnessing" role="note">
+<span class="label"><span class="fn-bracket">[</span>6<span class="fn-bracket">]</span></span>
+<span class="backrefs">(<a role="doc-backlink" href="#id12">1</a>,<a role="doc-backlink" href="#id13">2</a>,<a role="doc-backlink" href="#id14">3</a>)</span>
+<p>Robert Mies, Jérémy Bonvoisin, and Roland Jochem. Harnessing the synergy potential of open source hardware communities. <em>Co-creation: Reshaping business and society in the era of bottom-up Economics</em>, pages 129–145, 2019.</p>
+</aside>
+</div>
+<hr class="footnotes docutils" />
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./contents"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="week2.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">2. Ideation and prototyping</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="week4.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">4. OSH workflows and tools</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#clarifying-terms">Clarifying terms</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#orchestrating-collaboration-in-osh">Orchestrating collaboration in OSH</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#a-process-view-of-osh-collaboration">A process view of OSH collaboration</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#collaboration-in-a-business-context">Collaboration in a business context</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#slides-for-download">Slides for download</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#bibliography">Bibliography</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Julieta Arancio, Robert Mies - Licensed CC-BY 4.0
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=5b4479735964841361fd"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

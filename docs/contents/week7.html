@@ -1,0 +1,668 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>7. Emerging business models &#8212; Open Source Hardware Seminar @TU Berlin 2023</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=5b4479735964841361fd" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=5b4479735964841361fd" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=5b4479735964841361fd" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd" />
+  <script src="../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=5b4479735964841361fd"></script>
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'contents/week7';</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="8. OSH communities &amp; governance" href="week8.html" />
+    <link rel="prev" title="6. Licences &amp; standards" href="week6.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="../intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/logo.png" class="logo__image only-light" alt="Open Source Hardware Seminar @TU Berlin 2023 - Home"/>
+    <script>document.write(`<img src="../_static/logo.png" class="logo__image only-dark" alt="Open Source Hardware Seminar @TU Berlin 2023 - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../intro.html">
+                    Open Source Hardware Seminar
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="week1.html">1. Introduction to OSH</a></li>
+<li class="toctree-l1"><a class="reference internal" href="week2.html">2. Ideation and prototyping</a></li>
+<li class="toctree-l1"><a class="reference internal" href="week3.html">3. Collaboration in OSH</a></li>
+<li class="toctree-l1"><a class="reference internal" href="week4.html">4. OSH workflows and tools</a></li>
+<li class="toctree-l1"><a class="reference internal" href="week5.html">5. Documenting for reuse</a></li>
+<li class="toctree-l1"><a class="reference internal" href="week6.html">6. Licences &amp; standards</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">7. Emerging business models</a></li>
+<li class="toctree-l1"><a class="reference internal" href="week8.html">8. OSH communities &amp; governance</a></li>
+<li class="toctree-l1"><a class="reference internal" href="week9.html">Suggested activities &amp; evaluation</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/thesaly/OSHS-2023" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/thesaly/OSHS-2023/issues/new?title=Issue%20on%20page%20%2Fcontents/week7.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/contents/week7.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>7. Emerging business models</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#foss-vs-osh-business-models">FOSS vs OSH business models</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#smes-strategic-approaches">SMEs: strategic approaches</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#business-models-in-science">Business models in Science</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#white-rabbit-case-study">White Rabbit case study</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#slides-for-download">Slides for download</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#bibliography">Bibliography</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section id="emerging-business-models">
+<h1>7. Emerging business models<a class="headerlink" href="#emerging-business-models" title="Permalink to this heading">#</a></h1>
+<p>A business model is a conceptual framework that outlines how a business creates, delivers, and captures value. It describes the core aspects of how a company operates and generates revenue. A business model typically includes several key components. A value proposition describes the product or service the business offers and explains how it solves a problem or fulfills a need for customers. Revenue Streams detail how the business earns revenue (through product sales, subscription fees, licensing, advertising, or other means) while the cost structure describes the major costs and expenses associated with operating the business.</p>
+<p>Business models can vary significantly across industries and are subject to change as companies evolve and adapt to market conditions. For many OSH project, creating a clear and sustainable plan for how an OSH-based business can operate and generate profit is essential for sustaining their work and growth<a class="footnote-reference brackets" href="#footcite-euanalysis" id="id1" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a>. A key question here is how firms can articulate sustainable business models that maximize the value of their assets and differentiate themselves from free riders<a class="footnote-reference brackets" href="#footcite-aagerfalk2015software" id="id2" role="doc-noteref"><span class="fn-bracket">[</span>2<span class="fn-bracket">]</span></a>.</p>
+<div class="tip admonition">
+<p class="admonition-title">Tip</p>
+<p>The free rider problem is the burden on a shared resource that is created by its use or overuse by people who aren’t contributing back to the resource. Free-riding in open source communities leads to overworked and underpaid individuals, and eventually to burnout.</p>
+</div>
+<p>As usual, the closest successful example comes from FOSS. There are less studies on OSH business models, though they are slowly emerging<a class="footnote-reference brackets" href="#footcite-pujol2019obsessed" id="id3" role="doc-noteref"><span class="fn-bracket">[</span>3<span class="fn-bracket">]</span></a>. These describe models of companies providing complementary services and products with the paradigmatic example of Red Hat providing support for Linux-based products, or releasing existing proprietary code as open source to boost its profit on a complementary segment. In hardware, complementary assets such as manufacturing, distribution, service, and branding, can become key differentiators. Community benefits are also relevant to extract continuous product improvements aligned with user needs and attracting potential customers<a class="footnote-reference brackets" href="#footcite-dahlander2006man" id="id4" role="doc-noteref"><span class="fn-bracket">[</span>4<span class="fn-bracket">]</span></a>.</p>
+<section id="foss-vs-osh-business-models">
+<h2>FOSS vs OSH business models<a class="headerlink" href="#foss-vs-osh-business-models" title="Permalink to this heading">#</a></h2>
+<p>There are key differences between FOSS and OSH when it comes to business models<a class="footnote-reference brackets" href="#footcite-pujol2019obsessed" id="id5" role="doc-noteref"><span class="fn-bracket">[</span>3<span class="fn-bracket">]</span></a>.</p>
+<p>OSH firms depend on multiple stakeholders for delivering a complex product: design, quality, testing, manufacturing, distribution, servicing. Complex hardware demands both the users and the hardware manufacturers to collaborate during the development process.</p>
+<p>The marginal costs in software re-production approach zero, but in hardware the manufacturing costs of the physical artifact can be substantial. Distribution costs are also incurred for delivering the products.</p>
+<p>The development of physical components requires that prototypes are distributed across users and manufacturers collaborating together in the hardware development. Building physical hardware entails revisions. Diffusion and implementation costs in OSH are generally higher and increase commensurately with product complexity and specificity of the installation.</p>
+<p>The costs incurred in both OSS and OSH are related to the loss of property rights, a loss that makes realizing an economic return on the private investments impossible. Initial R&amp;D investments for developing a first beta version in OSS can vary from low to high. OSH projects with high product complexity are initially significant compared to OSS. This requires effective incentives for developers to join the open development of the hardware, emphasizing stability of technology (standards) as well as profit-realization opportunities for participants.</p>
+</section>
+<section id="smes-strategic-approaches">
+<h2>SMEs: strategic approaches<a class="headerlink" href="#smes-strategic-approaches" title="Permalink to this heading">#</a></h2>
+<p>Research from the OpenNext project with OSH Small and Medium Businesses has found a set of six approaches. These are commplementary strategies that allow companies to sustain their OSH activities in a commercial sphere.</p>
+<figure class="align-default" id="clonefork-fig">
+<a class="reference internal image-reference" href="../_images/41.png"><img alt="../_images/41.png" src="../_images/41.png" style="width: 435.4px; height: 374.5px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 36 </span><span class="caption-text">Strategic approaches model for OSH SMEs<a class="footnote-reference brackets" href="#footcite-opennext3" id="id6" role="doc-noteref"><span class="fn-bracket">[</span>5<span class="fn-bracket">]</span></a></span><a class="headerlink" href="#clonefork-fig" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p><strong>Leverage through communities</strong><br />
+The community sits at the very core of successful OSH development. Without buy-in from at least a few people (communities can be very small and still have a large impact) it is not possible to harness the collaborative dynamics that open source as a concept builds on. Community can leverage mass adoption of a product on even a global scale, and, as a consequence, help a product and brand
+become a standard in the industry.</p>
+<p><strong>Crowd- and third-party funding</strong><br />
+Funding sources can include public funding such as grants and innovation support, which is offered by both private and public/state-run foundations. Given the commons-centered nature of open-source assets it is often easier to fit in with the altruistic frameworks of such pools of money.
+Another option is Crowd-funding, where customers and community members alike pay upfront for your product and service. A good example is car manufacturer Sono Motors, who uses open source licenses for their add-ons; their initial crowdfunding campaign yielded over 50 million Euros in 2019 (see https://www.seedrs.com/sono-motors)</p>
+<p>Donations from either private donors (community members, users, future customers, or simply well-meaning and even anonymous donors) or benefactor organizations (aid work organizations, interest groups, political interest bodies, or even activist organizations) are another option. This requires your product to have a clear transformational capacity which could become a central component in the fulfilment of the mission that drives such potential donors.</p>
+<p><strong>Selling hardware products</strong><br />
+Selling hardware products is the most classic strategic approach in hardware both OSH and traditionally: Make a good product that someone needs and fulfil that need in exchange for money. By open sourcing your product (or parts thereof) you waive the exclusive right to manufacture and
+hence opens the floodgates for anyone, including your competitors, to do it alongside you.</p>
+<p><strong>Platforming</strong><br />
+Platforming allows suppliers of goods and services to connect directly with customers to cut out middlemen and learn about end-users’ needs directly from the source. Owning the platform grants such control that it often surmounts the value of being the entity supplying the goods. Airbnb (https://www.airbnb.com) is the most visible example of platforming business models.</p>
+<p>Platforms can take several forms:</p>
+<ul class="simple">
+<li><p>Hubs for interaction for suppliers and receivers of information, goods, and services alike, either with a free (example: Thingiverse, an open platform for designs)</p></li>
+<li><p>Classical marketplace approach (example: OpenDesk, a platform of decentralized production)</p></li>
+<li><p>Development platforms where users share labour and exercise leadership for shared outcomes (example: Wikifactory, which connects makers, engineers, and industry manufacturers in shared product development)</p></li>
+</ul>
+<p>A large strand in platforming takes the form of information hubs and forums for the sharing of knowledge and insights among peers. Many platforms even include a combination of these three main functions.</p>
+<p><strong>Ecosystem infrastructure</strong><br />
+Digging one or several layers deeper than the Platforming strategic approach, the Ecosystem infrastructure strategic approach focuses on providing key enabling services or resources for users in
+a relevant ecosystem or professional industry in order for them to thrive: Making life easier for them or helping them do better and have more impact.</p>
+<p>Examples include areas such as enabling digital connectivity (example: BRCK, expanding Wi-Fi-connectivity in marginal areas) or creating and distributing educational material that empowers users with information, tools, and even training to realize a shared mission.</p>
+<p>It can also take the shape of creating and maintaining repositories of knowledge, blueprints, and
+other similar resources, like databases (example: datahub.io, openwb.de).</p>
+<p><strong>Consulting services</strong><br />
+This is the keystone in the most classic business models of open-source software. By offering the software freely and benefitting from a vast public and ever-growing repository of code, you can customize solutions to your customers and hence add value worth paying for on top of the open-source asset. The very same goes for OSH, because whilst anyone can build and use your product as they please, it takes time to grow the expertise. And in many cases, users and customers will want to skip that learning curve by hiring experts.</p>
+<p>Consulting services can include a plethora of activities. The most significant ones tend to be facilitating/hosting workshops, technical consulting either ad-hoc or on a subscription/retainer
+basis, co-development of new products with customers, and, lastly, full enterprise solutions.</p>
+</section>
+<section id="business-models-in-science">
+<h2>Business models in Science<a class="headerlink" href="#business-models-in-science" title="Permalink to this heading">#</a></h2>
+<p>A paper from Joshua Pearce<a class="footnote-reference brackets" href="#footcite-pearce2017emerging" id="id7" role="doc-noteref"><span class="fn-bracket">[</span>6<span class="fn-bracket">]</span></a> discusses emerging business models in OSH for academic audiences. He distinguishes between business models to serve scientists who also are makers, those who are only users/buyers, and those who are outsourcerers.</p>
+<p><strong>Business Models to Serve Scientists: Makers (Type 1)</strong></p>
+<ol class="arabic simple">
+<li><p>Kit Suppliers</p></li>
+</ol>
+<ul class="simple">
+<li><p><em>Description:</em>* Firms offer kits containing all non-printed parts (“vitamins”) necessary for complex scientific hardware.</p></li>
+<li><p><em>Example:</em>* Adafruit, known for providing high-quality tutorials for building Open Hardware projects.</p></li>
+</ul>
+<ol class="arabic simple" start="2">
+<li><p>Specialty Component Suppliers</p></li>
+</ol>
+<ul class="simple">
+<li><p><em>Description:</em>* Businesses provide custom parts in materials not commonly available for 3D printing, catering to customers who seek specialization.</p></li>
+<li><p><em>Example:</em>* Shapeways, enabling scientists to order custom-printed Open Hardware components in exotic materials.</p></li>
+</ul>
+<ol class="arabic simple" start="3">
+<li><p>Calibration and Validation Services</p></li>
+</ol>
+<ul class="simple">
+<li><p><em>Description:</em>* Firms offer calibration and validation services for Open Hardware components, ensuring tools operate at specification.</p></li>
+<li><p><em>Importance:</em>* Provides researchers with confidence in the accuracy of measurements and functionality.</p></li>
+</ul>
+<p><strong>Business Models to Serve Scientists: Buyers (Type 2)</strong></p>
+<ol class="arabic simple">
+<li><p>Selling Libre Hardware</p></li>
+</ol>
+<ul class="simple">
+<li><p><em>Description:</em>* Firms fabricate and sell hardware with fully documented and freely available designs.</p></li>
+<li><p><em>Examples:</em>* OpenTrans’ $3,000 liquid handling robot, OpenPCR’s $649 PCR machine.</p></li>
+<li><p><em>Business Strategy:</em>* Similar to traditional models; products often sold at a considerable discount compared to proprietary versions.</p></li>
+</ul>
+<ol class="arabic simple" start="2">
+<li><p>Selling Libre Hardware Services</p></li>
+</ol>
+<ul class="simple">
+<li><p><em>Description:</em> Firms sell services, support, and training related to Open Hardware products.</p></li>
+<li><p><em>Strategies:</em> Subscription services, support and training, consulting for customized solutions, services to producer coalitions, and support for other Open Hardware firms.</p></li>
+<li><p><em>Examples:</em> Red Hat providing services around its FOSS product line, Sparkfun’s innovation strategy against cloners.</p></li>
+</ul>
+<p><strong>Business Models to Serve Scientists: Outsourcers (Type 3)</strong></p>
+<ul class="simple">
+<li><p><em>Description:</em> Firms offer online services based on Libre Hardware, performing experiments for scientists.</p></li>
+<li><p><em>Example:</em> Science Exchange connects core labs with scientists needing experiment services.</p></li>
+<li><p><em>Benefits:</em> Provides outsourced access to core facilities, connects labs and scientists, and monetizes the bartering system.</p></li>
+</ul>
+</section>
+<section id="white-rabbit-case-study">
+<h2>White Rabbit case study<a class="headerlink" href="#white-rabbit-case-study" title="Permalink to this heading">#</a></h2>
+<p>A research paper by Pujol Priego and Wareham<a class="footnote-reference brackets" href="#footcite-pujol2019obsessed" id="id8" role="doc-noteref"><span class="fn-bracket">[</span>3<span class="fn-bracket">]</span></a> makes a thorough case study of the White Rabbit project at CERN and the business models associated to it. Although CERN is a very particular case, we do recommend it and briefly describe here the three, complementary business models observed.</p>
+<p><strong>Co-creation model</strong><br />
+Under this model, the customer purchases WR hardware (product) and integrates the
+technology in their experimental setting. This was the prevailing business model applied for the
+first uptake of WR in the scientific industry. For instance: “We did feasibility studies and
+implemented WR for the European Space Agency to synchronize European Space Agency tracking stations”.</p>
+<p>As early adopters of the technology, the engagement of these customers is high, providing peer-to-peer support through feedback, bug reporting and design improvements. This first business model configuration had the effect of expanding the possibility of reusing the design in unexpected, experimental applications.</p>
+<p><strong>Buyer model</strong><br />
+Under this buyer model, customers come from diverse industry sectors, and they are not engaged in the R&amp;D process of WR, yet they purchase the product of one of the suppliers without any supplementary service.</p>
+<p>Within this business model, the customer completes the integration of WR in house. CERN
+did not provide user applications, but companies selling the hardware started providing these in the form of starter kits. However, firms are not able to make enough profit.</p>
+<p><strong>Time as a service</strong><br />
+Under this model, the customer is approached by an intermediary organization (or WR supplier) that produces the product and provides diverse services, which include WR integration into the customer organization. It requires an understanding of a new industry and the specificities of customer needs. Here the margins are typically higher than in the other models and leverage a broader range of creative implementations of the technology in the diverse business settings.</p>
+<p>Here, the supplier is not just a WR manufacturing firm but offers consulting, support and services. But due to the uniqueness of each client, and the vast diversity of sectors and business applications of the technology, suppliers are still struggling to “package” or standardize their services around WR.</p>
+</section>
+<section id="slides-for-download">
+<h2>Slides for download<a class="headerlink" href="#slides-for-download" title="Permalink to this heading">#</a></h2>
+<p><span class="xref myst">Link to slides</span></p>
+</section>
+<section id="bibliography">
+<h2>Bibliography<a class="headerlink" href="#bibliography" title="Permalink to this heading">#</a></h2>
+<div class="docutils container" id="id9">
+<aside class="footnote brackets" id="footcite-euanalysis" role="note">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id1">1</a><span class="fn-bracket">]</span></span>
+<p>Blind K.; Böhm M.; Grzegorzewska P.; Katz A; Muto S.; Pätsch S.; Schubert T. The impact of open source software and hardware on technological independence, competitiveness and innovation in the eu economy. 2021. URL: <a class="reference external" href="10.2759/430161">10.2759/430161</a>.</p>
+</aside>
+<aside class="footnote brackets" id="footcite-aagerfalk2015software" role="note">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id2">2</a><span class="fn-bracket">]</span></span>
+<p>Pär J Ågerfalk, Brian Fitzgerald, and Klaas-Jan Stol. <em>Software sourcing in the age of open: leveraging the unknown workforce</em>. Springer, 2015.</p>
+</aside>
+<aside class="footnote brackets" id="footcite-pujol2019obsessed" role="note">
+<span class="label"><span class="fn-bracket">[</span>3<span class="fn-bracket">]</span></span>
+<span class="backrefs">(<a role="doc-backlink" href="#id3">1</a>,<a role="doc-backlink" href="#id5">2</a>,<a role="doc-backlink" href="#id8">3</a>)</span>
+<p>Laia Pujol Priego and Jonathan Douglas Wareham. Obsessed with time? white rabbit at cern. <em>White Rabbit At CERN (March 2019). ESADE Business School Research Paper</em>, 2019.</p>
+</aside>
+<aside class="footnote brackets" id="footcite-dahlander2006man" role="note">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id4">4</a><span class="fn-bracket">]</span></span>
+<p>Linus Dahlander and Martin W Wallin. A man on the inside: unlocking communities as complementary assets. <em>Research policy</em>, 35(8):1243–1259, 2006.</p>
+</aside>
+<aside class="footnote brackets" id="footcite-opennext3" role="note">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id6">5</a><span class="fn-bracket">]</span></span>
+<p>OpenNEXT project. Third release of the open source business model development framework. URL: <a class="reference external" href="https://cordis.europa.eu/project/id/869984/results">https://cordis.europa.eu/project/id/869984/results</a>.</p>
+</aside>
+<aside class="footnote brackets" id="footcite-pearce2017emerging" role="note">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id7">6</a><span class="fn-bracket">]</span></span>
+<p>Joshua M Pearce. Emerging business models for open source hardware. <em>Journal of Open Hardware</em>, 1(1):2, 2017.</p>
+</aside>
+</div>
+<hr class="footnotes docutils" />
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./contents"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="week6.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">6. Licences &amp; standards</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="week8.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">8. OSH communities &amp; governance</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#foss-vs-osh-business-models">FOSS vs OSH business models</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#smes-strategic-approaches">SMEs: strategic approaches</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#business-models-in-science">Business models in Science</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#white-rabbit-case-study">White Rabbit case study</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#slides-for-download">Slides for download</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#bibliography">Bibliography</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Julieta Arancio, Robert Mies - Licensed CC-BY 4.0
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=5b4479735964841361fd"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

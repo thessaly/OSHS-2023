@@ -1,0 +1,800 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>1. Introduction to OSH &#8212; Open Source Hardware Seminar @TU Berlin 2023</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=5b4479735964841361fd" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=5b4479735964841361fd" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=5b4479735964841361fd" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd" />
+  <script src="../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=5b4479735964841361fd"></script>
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'contents/week1';</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="2. Ideation and prototyping" href="week2.html" />
+    <link rel="prev" title="Open Source Hardware Seminar" href="../intro.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="../intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/logo.png" class="logo__image only-light" alt="Open Source Hardware Seminar @TU Berlin 2023 - Home"/>
+    <script>document.write(`<img src="../_static/logo.png" class="logo__image only-dark" alt="Open Source Hardware Seminar @TU Berlin 2023 - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../intro.html">
+                    Open Source Hardware Seminar
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">1. Introduction to OSH</a></li>
+<li class="toctree-l1"><a class="reference internal" href="week2.html">2. Ideation and prototyping</a></li>
+<li class="toctree-l1"><a class="reference internal" href="week3.html">3. Collaboration in OSH</a></li>
+<li class="toctree-l1"><a class="reference internal" href="week4.html">4. OSH workflows and tools</a></li>
+<li class="toctree-l1"><a class="reference internal" href="week5.html">5. Documenting for reuse</a></li>
+<li class="toctree-l1"><a class="reference internal" href="week6.html">6. Licences &amp; standards</a></li>
+<li class="toctree-l1"><a class="reference internal" href="week7.html">7. Emerging business models</a></li>
+<li class="toctree-l1"><a class="reference internal" href="week8.html">8. OSH communities &amp; governance</a></li>
+<li class="toctree-l1"><a class="reference internal" href="week9.html">Suggested activities &amp; evaluation</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/thesaly/OSHS-2023" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/thesaly/OSHS-2023/issues/new?title=Issue%20on%20page%20%2Fcontents/week1.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/contents/week1.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>1. Introduction to OSH</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#open-source-hardware-definition-and-background">Open source hardware definition and background</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#open-source-hardware-in-science">Open source hardware in science</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#openness-in-practice">Openness in practice</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#motivations-for-engaging-with-osh">Motivations for engaging with OSH</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#challenges-of-osh-practice">Challenges of OSH practice</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#osh-and-standardization-covid-19-pandemic">OSH and standardization: COVID-19 pandemic</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#osh-applications">OSH applications</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#cases">Cases</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-white-rabbit-project">The White Rabbit project</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-smart-citizen-project">The Smart Citizen project</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#slides-for-download">Slides for download</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#bibliography">Bibliography</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section id="introduction-to-osh">
+<h1>1. Introduction to OSH<a class="headerlink" href="#introduction-to-osh" title="Permalink to this heading">#</a></h1>
+<p>Today, most of us are probably familiar with the concept of free and open source software (FOSS). So we are all in the same page, FOSS is software that anyone can access, study, modify or distribute it. The source code is shared online and its openness is protected through the use of a license.</p>
+<div class="tip admonition">
+<p class="admonition-title">Tip</p>
+<p>FOSS is an inclusive term that covers both free software and open-source software, which have differing philosophical backgrounds. The <a class="reference external" href="https://www.fsf.org">Free Software Foundation</a> defines free software in terms of users’ freedoms, or “free as in free speech, not as in free beer”. Open source software focuses more on the peer-to-peer development model.</p>
+</div>
+<p>FOSS is successful. Most of the web services we use today are using FOSS, from Google searches to the Android operative system, and even the backend of platforms like Facebook in huge data centres powered by Linux: open source is ubiquitous. This significant growth in the last 20 years has inspired people around the world to expand the concept of open source to other domains beyond software.</p>
+<p>One of those emergent open source domains is open source hardware (OSH), sharing the “source code” of material objects. As researchers, one way we have of observing how the practice has grown in recent years is to look at trends in publications. Academic references reflect how much researchers are working ith a certain topic. A search of the term open hardware in Web of Science (<a class="reference internal" href="#oshcitations-fig"><span class="std std-numref">Fig. 1</span></a>) shows that the topic is mentioned more and more in the last 20 years with a rising trend, that accelerates significantly in the last five years.</p>
+<figure class="align-default" id="oshcitations-fig">
+<a class="reference internal image-reference" href="../_images/1.png"><img alt="../_images/1.png" src="../_images/1.png" style="width: 620.0px; height: 366.40000000000003px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 1 </span><span class="caption-text">Open source hardware-related publications, extracted from <a class="reference external" href="http://webofknowledge.com/UA">Web of Knowledge</a> on 20/11/2022</span><a class="headerlink" href="#oshcitations-fig" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>A closer look at the countries (<a class="reference internal" href="#oshcitationsbycountry-fig"><span class="std std-numref">Fig. 2</span></a>) from which these publications originate, shows that the US leads the trend. However, when we combine all European countries, Europe becomes the most important region in the open hardware academic conversation.</p>
+<figure class="align-default" id="oshcitationsbycountry-fig">
+<a class="reference internal image-reference" href="../_images/2.png"><img alt="../_images/2.png" src="../_images/2.png" style="width: 689.5px; height: 430.5px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 2 </span><span class="caption-text">Open source hardware-related publications by country, extracted from <a class="reference external" href="http://webofknowledge.com/UA">Web of Knowledge</a> on 20/11/2022</span><a class="headerlink" href="#oshcitationsbycountry-fig" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<section id="open-source-hardware-definition-and-background">
+<h2>Open source hardware definition and background<a class="headerlink" href="#open-source-hardware-definition-and-background" title="Permalink to this heading">#</a></h2>
+<p>Before moving on, it’s necessary to make sure we all know what we mean when we refer to open source hardware, or OSH. The OSH definition is hosted by the <a class="reference external" href="https://www.oshwa.org/">Open Source Hardware Association (OSHWA)</a>, a US-based non profit</p>
+<div class="tip admonition">
+<p class="admonition-title">Tip</p>
+<p>OSH can be defined as:
+<em>“a term for tangible artifacts — machines, devices, or other physical things — whose design has been released to the public in such a way that anyone can make, modify, distribute, and use those things.”</em></p>
+<p>Open source hardware gives people the freedom to control their technology while sharing knowledge and encouraging commerce through the open exchange of designs.</p>
+</div>
+<p>The open source hardware definition was the result of years of discussions and work in the open hardware community (<a class="reference internal" href="#oshhistory-fig"><span class="std std-numref">Fig. 3</span></a>). The discussions can be traced back to very successful projects like <a class="reference external" href="https://reprap.org/wiki/RepRap">RepRap</a> and <a class="reference external" href="https://www.arduino.cc/">Arduino</a>, in the early 2000s, that lowered access barriers to 3D-printing and electronics prototyping. This produced an explosion of creativity and projects worldwide, and the emergence of communities of practice around specific projects and technologies.</p>
+<p>In this context of so much activity it was hard to understand what it meant to be open. The first open hardware licence to emerge was the <a class="reference external" href="https://tapr.org/the-tapr-open-hardware-license/">TAPR Open Hardware Licence</a>. It was written by the ham radio community in 2007 and was a little different from the open source licences we are used to, taking the format of a contract.</p>
+<figure class="align-default" id="oshhistory-fig">
+<a class="reference internal image-reference" href="../_images/3.png"><img alt="../_images/3.png" src="../_images/3.png" style="width: 594.3px; height: 379.4px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 3 </span><span class="caption-text">Highlights in a brief open source hardware history</span><a class="headerlink" href="#oshhistory-fig" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>Soon after, around 2009, prominent actors in the community started discussing what a unified definition of open source hardware would look like. Following these discussions and the first draft of the definition in 2010, in 2011 CERN launched its first version of the <a class="reference external" href="https://cern-ohl.web.cern.ch/">CERN Open Hardware Licence</a>.</p>
+<p>Hardware engineers at CERN had been working on open hardware as a way of avoiding vendor lock-in of specific parts of the LHC. The licence was designed to be compatible with the open hardware definition, and soon became the most widely used one. In 2012 OSHWA was founded as a US-based non-profit to host the definition and provide a <a class="reference external" href="https://certification.oshwa.org/">certification program</a>. The non-profit also runs the annual <a class="reference external" href="https://2023.oshwa.org/">Open Hardware Summit</a>, the most important event of the community.</p>
+</section>
+<section id="open-source-hardware-in-science">
+<h2>Open source hardware in science<a class="headerlink" href="#open-source-hardware-in-science" title="Permalink to this heading">#</a></h2>
+<p>Most recently, in 2016, scientists and enthusiasts of science and education around the world created a new community, subdomain of OSHWA: the <a class="reference external" href="https://openhardware.science/">open science hardware community</a>, or GOSH. GOSH has been very active in the last five years, as the open science movement provides momentum for open hardware in science and there has always been a strong push from science in open hardware.</p>
+<p>In research, open hardware should be considered an integral part of open science. However, most institutional open science programs today solely focus on access to open data and publications. The role of scientific instruments, both software and hardware, is often overlooked. Open hardware in science not only provides more reproducibility for research: the approach also allows researchers to prototype experimental settings, share them, improve them and access instruments that can be prohibitively expensive in a faster, more efficient way.</p>
+<p>Open science hardware combines open hardware practices with the open science philosophy and ethos. In practice, open science hardware instruments should comply with the same definition hosted by OSHWA. Open source hardware was recognized as a key element of open science (<a class="reference internal" href="#unesco-fig"><span class="std std-numref">Fig. 4</span></a>) in the recent <a class="reference external" href="https://www.unesco.org/en/open-science/about?hub=686">UNESCO recommendation for open science</a>.</p>
+<figure class="align-default" id="unesco-fig">
+<a class="reference internal image-reference" href="../_images/4.png"><img alt="../_images/4.png" src="../_images/4.png" style="width: 471.79999999999995px; height: 555.8px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 4 </span><span class="caption-text">UNESCO Open Science Recommendation (2021) including open hardware as open scientific knowledge<a class="footnote-reference brackets" href="#footcite-pervsic2023open" id="id1" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a>.</span><a class="headerlink" href="#unesco-fig" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+</section>
+<section id="openness-in-practice">
+<h2>Openness in practice<a class="headerlink" href="#openness-in-practice" title="Permalink to this heading">#</a></h2>
+<p>One of the missions of the open source hardware definition is to clarify what it means to be open. To be recognised as OSH, designs should comply with certain requirements:</p>
+<ul class="simple">
+<li><p>The source files including blueprints, electronic schemes, software and other materials need to be publicly available so anyone can both access, modify, reproduce, distribute or sell the hardware;</p></li>
+<li><p>A license should specify the terms under which the hardware is released, but in no case the license can prevent others from making or selling derivatives;</p></li>
+<li><p>The license can require attribution, or for derivatives to carry different identifiers, or be strictly copyleft.</p></li>
+</ul>
+<p>Projects can also use trademarks, as we will see in later sessions.</p>
+<p>Today, if someone creates a project and wants to call it “open source hardware”, OSHWA provides the option of self-certifying it. This allows a project to use the open hardware logo and get an identification code. OSHWA provides <a class="reference external" href="https://certification.oshwa.org/">self-certification guidelines</a> with details for opening hardware, software, producing documentation for others to understand how to interact with your project, and branding.</p>
+<p>But what does this mean in practice? Research by Bonvoisin and Mies<a class="footnote-reference brackets" href="#footcite-bonvoisin2018measuring" id="id2" role="doc-noteref"><span class="fn-bracket">[</span>2<span class="fn-bracket">]</span></a> suggests that existing practices can be distinguished in two main categories: process openness, and product openness (<a class="reference internal" href="#openometer-fig"><span class="std std-numref">Fig. 5</span></a>). As part of this research project, the idea of measuring product and process openness was embedded in a concrete instrument: the open-o-meter. The idea behind it was not to ask whether hardware is open but how open it is. The indicator provides a progressive scale of openness in a project, moving from product to process, indicating which are the elements associated to each stage. It was intended to function both as a tool to monitor community practices and as a guide for improving those.</p>
+<figure class="align-default" id="openometer-fig">
+<a class="reference internal image-reference" href="../_images/5.png"><img alt="../_images/5.png" src="../_images/5.png" style="width: 589.4px; height: 314.29999999999995px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 5 </span><span class="caption-text">OSH practices associated to process and project openness in a 0 to 8 rating<a class="footnote-reference brackets" href="#footcite-bonvoisin2018measuring" id="id3" role="doc-noteref"><span class="fn-bracket">[</span>2<span class="fn-bracket">]</span></a>.</span><a class="headerlink" href="#openometer-fig" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>A 2021 paper<a class="footnote-reference brackets" href="#footcite-bonvoisin2021seven" id="id4" role="doc-noteref"><span class="fn-bracket">[</span>3<span class="fn-bracket">]</span></a> explains the alternative routes for product development, including open source hardware (<a class="reference internal" href="#openprocesses-fig"><span class="std std-numref">Fig. 6</span></a>). Conventional development of products takes place within the Research &amp; Development department of a firm. The norm is that designs are not shared outside the boundaries of the company: it’s both product and process-closed. One alternative that has become more popular recently is open innovation, where companies crowdsource ideas from the users community, or employ crowdfunding mechanisms. These processes open the ideation stage of product development, but most of the time lead to closed or proprietary outcomes.</p>
+<p>Open source hardware, on the other hand, can be created in two different ways:</p>
+<ul class="simple">
+<li><p>As a public innovation: a specific group that does not innovate with others during the design process but shares the outcomes openly, e.g. for broadcasting or giving back to the OSH “community”;</p></li>
+<li><p>As open source product development: both the design stages and the product itself are opened to other actors.</p></li>
+</ul>
+<figure class="align-default" id="openprocesses-fig">
+<a class="reference internal image-reference" href="../_images/6.png"><img alt="../_images/6.png" src="../_images/6.png" style="width: 522.1999999999999px; height: 237.99999999999997px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 6 </span><span class="caption-text">Open source hardware versus open design<a class="footnote-reference brackets" href="#footcite-bonvoisin2021seven" id="id5" role="doc-noteref"><span class="fn-bracket">[</span>3<span class="fn-bracket">]</span></a>.</span><a class="headerlink" href="#openprocesses-fig" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+</section>
+<section id="motivations-for-engaging-with-osh">
+<h2>Motivations for engaging with OSH<a class="headerlink" href="#motivations-for-engaging-with-osh" title="Permalink to this heading">#</a></h2>
+<p>One of the reasons why researchers are using and developing open source hardware is because of its
+more accessible cost. A study by Joshua Pearce<a class="footnote-reference brackets" href="#footcite-pearce2020economic" id="id6" role="doc-noteref"><span class="fn-bracket">[</span>4<span class="fn-bracket">]</span></a> examines articles in the specialized journal <a class="reference external" href="https://www.hardware-x.com/">HardwareX</a> and the <a class="reference external" href="https://collections.plos.org/channel/open-source-toolkit/">PLOS Open Source Toolkit</a>. They concluded that in some cases researchers could
+save up to 87% costs by using open source hardware(<a class="reference internal" href="#pearce-fig"><span class="std std-numref">Fig. 7</span></a>).</p>
+<figure class="align-default" id="pearce-fig">
+<a class="reference internal image-reference" href="../_images/12.png"><img alt="../_images/12.png" src="../_images/12.png" style="width: 642.5999999999999px; height: 240.1px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 7 </span><span class="caption-text">OSH savings according to Pearce 2020<a class="footnote-reference brackets" href="#footcite-pearce2020economic" id="id7" role="doc-noteref"><span class="fn-bracket">[</span>4<span class="fn-bracket">]</span></a></span><a class="headerlink" href="#pearce-fig" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>Researchers also engage with open source hardware to avoid the bureaucracy of dealing with
+vendors when they want to try something new. Scientific instruments are made by a few specialized
+companies. If researchers need a modification or repair in an instrument, they often face important
+costs and delays. Open source hardware can then provide a way for bypassing the vendor and
+quickly prototype a new experimental setting.</p>
+<p>In the case of CERN<a class="footnote-reference brackets" href="#footcite-kauttu2018open" id="id8" role="doc-noteref"><span class="fn-bracket">[</span>5<span class="fn-bracket">]</span></a>, the very special requirements of the Large Hadron Collider made it ideal for imposing openness to suppliers. To avoid vendor lock-in with vendors, CERN developed the open hardware licence and fostered an open ecosystem where small and medium companies earn money by providing manufacturing and support services, while the designs are kept open for anyone to access.</p>
+<p>In countries where import restrictions and distance from manufacturers play an important role,
+open hardware can make the difference between running a research project or not<a class="footnote-reference brackets" href="#footcite-arancio2023inequalities" id="id9" role="doc-noteref"><span class="fn-bracket">[</span>6<span class="fn-bracket">]</span></a>. In the Global
+South, the cost of installing an instrument is more expensive than closer to manufacturers.
+Moreover, technical support is often not available and spare parts are hard to source.
+Researchers in the Global South use open source hardware to overcome these limitations, design
+more powerful experiments and adapt tools to their local conditions<a class="footnote-reference brackets" href="#footcite-baden2015open" id="id10" role="doc-noteref"><span class="fn-bracket">[</span>7<span class="fn-bracket">]</span></a>. As manufacturers are far away from implementation contexts, it is often necessary to modify tools so they become useful in situ.</p>
+<p>From a policy perspective, open source hardware provides a way of fostering more participatory,
+transparent and sustainable science practice. It opens a channel for non-academic actors to engage
+with research in a creative way, and ensures that the results of investments of public funds remain
+public<a class="footnote-reference brackets" href="#footcite-arancio2022equitable" id="id11" role="doc-noteref"><span class="fn-bracket">[</span>8<span class="fn-bracket">]</span></a>.</p>
+<p>The GOSH community has been working recently on identifying which policies should change at
+university to foster these open innovation ecosystems based on open hardware. An important
+milestone was achieved in 2021, when the global UNESCO recommendation on Open Science
+identified open hardware as an essential component of open science strategies, for the first time.</p>
+</section>
+<section id="challenges-of-osh-practice">
+<h2>Challenges of OSH practice<a class="headerlink" href="#challenges-of-osh-practice" title="Permalink to this heading">#</a></h2>
+<p>Since the OSH definition was adopted, there have been various initiatives aiming to standardize how to document, find and assess quality in OSH projects. When looking at what OSH projects and companies are doing in practice<a class="footnote-reference brackets" href="#footcite-bonvoisin-2020" id="id12" role="doc-noteref"><span class="fn-bracket">[</span>9<span class="fn-bracket">]</span></a>, we can see clearly this trend.</p>
+<p>However, there are some key challenges that are preventing efficient standardisation (<a class="reference internal" href="#oshchallenges-fig"><span class="std std-numref">Fig. 8</span></a>). Although the definition is more than a decade old, there’s still variety in the interpretations of what openness means, which translate to practice. Compared to FOSS, FOSH is a young field; the OSH definition is adopted in terms of licensing, but doesn’t necessarily translate to other domains. It is not uncommon to find OSH projects using OSH licences but without documentation, or with very poor quality docs. This is a very important issue, as it determines if someone can truly use or contribute to a project.</p>
+<figure class="align-default" id="oshchallenges-fig">
+<a class="reference internal image-reference" href="../_images/7.png"><img alt="../_images/7.png" src="../_images/7.png" style="width: 538.3px; height: 217.0px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 8 </span><span class="caption-text">Open source hardware versus open design<a class="footnote-reference brackets" href="#footcite-bonvoisin-2020" id="id13" role="doc-noteref"><span class="fn-bracket">[</span>9<span class="fn-bracket">]</span></a>.</span><a class="headerlink" href="#oshchallenges-fig" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<section id="osh-and-standardization-covid-19-pandemic">
+<h3>OSH and standardization: COVID-19 pandemic<a class="headerlink" href="#osh-and-standardization-covid-19-pandemic" title="Permalink to this heading">#</a></h3>
+<p>The need for and the nuance in standardisation can be better illustrated with an example. During the
+COVID-19 pandemic, open source hardware played a key role in providing local access to essential
+elements such as PPE and other devices<a class="footnote-reference brackets" href="#footcite-bowser2021stitching" id="id14" role="doc-noteref"><span class="fn-bracket">[</span>10<span class="fn-bracket">]</span></a>.</p>
+<p>Many communities around the world started working on the ventilator shortage, thinking of producing a locally available open source hardware alternative. Given their envisaged use on patients and strict product certification requirements in medical technology, there was a need for testing to ensure that the equipment is safe. In industry, every product has its own testing routines that are not always easily comparable. How to ensure the OSH devices could be tested in an efficient and effective way?</p>
+<p>The <a class="reference external" href="https://github.com/PubInv/ventmon-ventilator-inline-test-monitor">VentMon</a><a class="footnote-reference brackets" href="#footcite-read2021ventmon" id="id15" role="doc-noteref"><span class="fn-bracket">[</span>11<span class="fn-bracket">]</span></a> project tackled this problem by creating an open hardware testing device and an IOT platform for openly recorded and publicly shared testing data.</p>
+<figure class="align-default" id="ventmon1-fig">
+<a class="reference internal image-reference" href="../_images/8.png"><img alt="../_images/8.png" src="../_images/8.png" style="width: 598.5px; height: 317.79999999999995px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 9 </span><span class="caption-text">Open source hardware ventilator tester and monitor, Ventmon<a class="footnote-reference brackets" href="#footcite-read2021ventmon" id="id16" role="doc-noteref"><span class="fn-bracket">[</span>11<span class="fn-bracket">]</span></a>.</span><a class="headerlink" href="#ventmon1-fig" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>The device was given out for free to selected projects and the project team created an associated open access data standard. In the future, such practices could improve product certification regimes where life is at stake or public health is concerned.</p>
+</section>
+</section>
+<section id="osh-applications">
+<h2>OSH applications<a class="headerlink" href="#osh-applications" title="Permalink to this heading">#</a></h2>
+<p>We gave a definition of open source hardware, showed how in practice openness is understood as
+many different things, and therefore open source hardware projects available today are very
+heterogeneous. However, a key question to understand this movement is what are people using
+open hardware for?</p>
+<figure class="align-default" id="oshwasurvey-fig">
+<a class="reference internal image-reference" href="../_images/9.png"><img alt="../_images/9.png" src="../_images/9.png" style="width: 583.8px; height: 269.5px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 10 </span><span class="caption-text">OSH fields of application, in the State of Open Source Hardware 2021 by OSHWA <a class="footnote-reference brackets" href="#footcite-state2021" id="id17" role="doc-noteref"><span class="fn-bracket">[</span>12<span class="fn-bracket">]</span></a>.</span><a class="headerlink" href="#oshwasurvey-fig" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>OSHWA publishes a periodic report based on a survey to the community, called the state of open
+source hardware using data from their certification database. In the last 2021 report<a class="footnote-reference brackets" href="#footcite-state2021" id="id18" role="doc-noteref"><span class="fn-bracket">[</span>12<span class="fn-bracket">]</span></a> we see that science is gaining traction among very strong fields in open hardware, like electronics, 3D printing and education (<a class="reference internal" href="#oshwasurvey-fig"><span class="std std-numref">Fig. 10</span></a>).</p>
+<p>The survey also asks participants about their motivations (<a class="reference internal" href="#oshwasurvey2-fig"><span class="std std-numref">Fig. 11</span></a>). We can also see that after the traditional hobbyist use of open source hardware, more people are now using OSH to learn about hardware itself. Because open hardware ideally comes with documentation that allows others to understand what is happening, it is an ideal practice to learn how devices work. In this 2021 survey we also see that almost a third of respondents mention they use open source hardware to teach or do research, which was not very frequent in previous years.</p>
+<figure class="align-default" id="oshwasurvey2-fig">
+<a class="reference internal image-reference" href="../_images/10.png"><img alt="../_images/10.png" src="../_images/10.png" style="width: 488.59999999999997px; height: 266.0px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 11 </span><span class="caption-text">OSH motivations, in the State of Open Source Hardware 2021 by OSHWA <a class="footnote-reference brackets" href="#footcite-state2021" id="id19" role="doc-noteref"><span class="fn-bracket">[</span>12<span class="fn-bracket">]</span></a>.</span><a class="headerlink" href="#oshwasurvey2-fig" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>Following up on the analysis of OSH publications, we can also disaggregate the results to illustrate which scientific fields are the most prominent(<a class="reference internal" href="#publications2-fig"><span class="std std-numref">Fig. 12</span></a>). While computer science and engineering return the most results, the open hardware approach has been taken up within many other disciplines. Particularly in medical applications, open source hardware is gaining traction.</p>
+<figure class="align-default" id="publications2-fig">
+<a class="reference internal image-reference" href="../_images/11.png"><img alt="../_images/11.png" src="../_images/11.png" style="width: 652.4px; height: 356.29999999999995px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 12 </span><span class="caption-text">OSH publications disaggregated by field of application, extracted from <a class="reference external" href="http://webofknowledge.com/UA">Web of Knowledge</a> on 20/11/2022.</span><a class="headerlink" href="#publications2-fig" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+</section>
+<section id="cases">
+<h2>Cases<a class="headerlink" href="#cases" title="Permalink to this heading">#</a></h2>
+<section id="the-white-rabbit-project">
+<h3>The White Rabbit project<a class="headerlink" href="#the-white-rabbit-project" title="Permalink to this heading">#</a></h3>
+<p><a class="reference external" href="http://white-rabbit.web.cern.ch/">White Rabbit</a> is a project related to timing and data acquisition systems in high-energy physics experiments. Scientists and engineers at CERN needed to address the problem of minute data latency that was corrupting measurements in their distributed computing network. In 2006 they came up with White Rabbit, a piece of OSH that aims to provide a scalable and precise timing distribution system. The White Rabbit technology uses the Precision Time Protocol (PTP) to synchronize clocks across a network with sub-nanosecond accuracy.</p>
+<p>Initially developed in collaboration with GSI Helmholtzzentrum für Schwerionenforschung and two Spanish companies, White Rabbit has evolved into a collaborative ecosystem involving various organizations. The technology’s applications extend beyond the scientific industry, with examples including metrology research, neutrino telescopes, Cherenkov submarine detectors, and cosmic-ray observatories.</p>
+<p>White Rabbit has found applications in diverse industries, including telecommunications, financial services (addressing MiFID II regulations), smart grids, air traffic control, and Industry 4.0. Notable adopters include Vodafone and the Frankfurt Stock Exchange, with applications in High-Frequency Trading (HFT) matching engines. The Madrid Stock Exchange is piloting White Rabbit for time distribution, and the technology has gained attention in the Smart Grid community.</p>
+<p>Pujol &amp; Warenham (2019)<a class="footnote-reference brackets" href="#footcite-pujol2019obsessed" id="id20" role="doc-noteref"><span class="fn-bracket">[</span>13<span class="fn-bracket">]</span></a> interviewed members of the project and describe the benefits of an open source approach:</p>
+<blockquote>
+<div><p>First, an open source approach made it possible to avoid a vendor lock-in situation; given the initially high asset-specificity of the technology, there is a high risk of dependency on specific technology suppliers. Secondly, an open source model should offer a more diverse and rigorous evaluation of technology development […] Finally, flexibility is a particularly important characteristic for researchers working on the edge of science who need customized, never-before-seen equipment to meet their exact needs and specifications in an uncertain and modular environment.</p>
+</div></blockquote>
+<p>You can read an interview to the project members in the <a class="reference external" href="https://www.openmake.de/blog/2022/10/20/2022-10-06-interview-white-rabbit/">OpenMake blog</a>.</p>
+</section>
+<section id="the-smart-citizen-project">
+<h3>The Smart Citizen project<a class="headerlink" href="#the-smart-citizen-project" title="Permalink to this heading">#</a></h3>
+<p>The <a class="reference external" href="https://smartcitizen.me/">Smart Citizen System</a> is a comprehensive set of modular hardware components designed for environmental monitoring. The system serves various purposes, including citizen science, educational activities, and advanced scientific research. It consists of a central data logger with network connectivity, to which different components are connected. The core sensing capabilities utilize low-cost sensors reviewed for environmental monitoring. The system is extendable and integrates non-hardware components like a dedicated storage platform and a sensor analysis framework.</p>
+<p>The motivation behind the Smart Citizen System lies in addressing the dual needs of citizen science and more sophisticated scientific research. To fulfill these needs, two solutions have been developed: the Smart Citizen Kit for citizen science and awareness activities, and the Smart Citizen Station for more complex and accurate air pollution sensing.</p>
+<p>The system allows for connection with a wide range of third-party sensors through an expansion bus. It aims to provide a low-cost sensing solution, an open-source end-to-end solution for scientific development, and an educational tool. The Smart Citizen System allows end-users to participate not only in measurement activities but also in the analysis and development processes.</p>
+<p>A research paper in HardwareX<a class="footnote-reference brackets" href="#footcite-camprodon2019smart" id="id21" role="doc-noteref"><span class="fn-bracket">[</span>14<span class="fn-bracket">]</span></a> describes the hardware for both the Smart Citizen Kit and the Smart Citizen Station. The project builds on the legacy of previous generations of the Smart Citizen project and has been developed as part of the of iSCAPE (Improving Smart Control of Air Pollution in Europe) project, which is funded by the European Community’s H2020 Programme.
+The <a class="reference external" href="https://smartcitizen.me/">Smart Citizen System</a> is a comprehensive set of modular hardware components designed for environmental monitoring. The system serves various purposes, including citizen science, educational activities, and advanced scientific research. It consists of a central data logger with network connectivity, to which different components are connected. The core sensing capabilities utilize low-cost sensors reviewed for environmental monitoring. The system is extendable and integrates non-hardware components like a dedicated storage platform and a sensor analysis framework.</p>
+<p>The motivation behind the Smart Citizen System lies in addressing the dual needs of citizen science and more sophisticated scientific research. To fulfill these needs, two solutions have been developed: the Smart Citizen Kit for citizen science and awareness activities, and the Smart Citizen Station for more complex and accurate air pollution sensing.</p>
+<p>The system allows for connection with a wide range of third-party sensors through an expansion bus. It aims to provide a low-cost sensing solution, an open-source end-to-end solution for scientific development, and an educational tool. The Smart Citizen System allows end-users to participate not only in measurement activities but also in the analysis and development processes.</p>
+<p>A research paper in HardwareX<a class="footnote-reference brackets" href="#footcite-camprodon2019smart" id="id22" role="doc-noteref"><span class="fn-bracket">[</span>14<span class="fn-bracket">]</span></a> describes the hardware for both the Smart Citizen Kit and the Smart Citizen Station. The project builds on the legacy of previous generations of the Smart Citizen project and has been developed as part of the of iSCAPE (Improving Smart Control of Air Pollution in Europe) project, which is funded by the European Community’s H2020 Programme.</p>
+</section>
+</section>
+<section id="slides-for-download">
+<h2>Slides for download<a class="headerlink" href="#slides-for-download" title="Permalink to this heading">#</a></h2>
+<p><a class="reference download internal" download="" href="../_downloads/2c1497fc06d2e116c52786c15d2903dc/OSHS_units1and2.pdf"><span class="xref download myst">Link to slides</span></a></p>
+</section>
+<section id="bibliography">
+<h2>Bibliography<a class="headerlink" href="#bibliography" title="Permalink to this heading">#</a></h2>
+<div class="docutils container" id="id23">
+<aside class="footnote brackets" id="footcite-pervsic2023open" role="note">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id1">1</a><span class="fn-bracket">]</span></span>
+<p>Ana Peršić and Tiffany Straza. Open science for all: implementing the unesco recommendation on open science for an equitable and just transition to open science. <em>College &amp; Research Libraries News</em>, 84(10):377, 2023.</p>
+</aside>
+<aside class="footnote brackets" id="footcite-bonvoisin2018measuring" role="note">
+<span class="label"><span class="fn-bracket">[</span>2<span class="fn-bracket">]</span></span>
+<span class="backrefs">(<a role="doc-backlink" href="#id2">1</a>,<a role="doc-backlink" href="#id3">2</a>)</span>
+<p>Jérémy Bonvoisin and Robert Mies. Measuring openness in open source hardware with the open-o-meter. <em>Procedia CIRP</em>, 78:388–393, 2018.</p>
+</aside>
+<aside class="footnote brackets" id="footcite-bonvoisin2021seven" role="note">
+<span class="label"><span class="fn-bracket">[</span>3<span class="fn-bracket">]</span></span>
+<span class="backrefs">(<a role="doc-backlink" href="#id4">1</a>,<a role="doc-backlink" href="#id5">2</a>)</span>
+<p>Jérémy Bonvoisin, Robert Mies, and Jean-François Boujut. Seven observations and research questions about open design and open source hardware. <em>Design Science</em>, 7:e22, 2021.</p>
+</aside>
+<aside class="footnote brackets" id="footcite-pearce2020economic" role="note">
+<span class="label"><span class="fn-bracket">[</span>4<span class="fn-bracket">]</span></span>
+<span class="backrefs">(<a role="doc-backlink" href="#id6">1</a>,<a role="doc-backlink" href="#id7">2</a>)</span>
+<p>Joshua M Pearce. Economic savings for scientific free and open source technology: a review. <em>HardwareX</em>, 8:e00139, 2020.</p>
+</aside>
+<aside class="footnote brackets" id="footcite-kauttu2018open" role="note">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id8">5</a><span class="fn-bracket">]</span></span>
+<p>Pietari Matti Veikko Kauttu. Open hardware as an experimental commercialization strategy: challenges and potentialities. <em>CERN IdeaSquare Journal of Experimental Innovation</em>, 2(2):25–31, 2018.</p>
+</aside>
+<aside class="footnote brackets" id="footcite-arancio2023inequalities" role="note">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id9">6</a><span class="fn-bracket">]</span></span>
+<p>Julieta Arancio. From inequalities to epistemic innovation: insights from open science hardware projects in latin america. <em>Environmental Science &amp; Policy</em>, 150:103576, 2023.</p>
+</aside>
+<aside class="footnote brackets" id="footcite-baden2015open" role="note">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id10">7</a><span class="fn-bracket">]</span></span>
+<p>Tom Baden, Andre Maia Chagas, Greg Gage, Timothy Marzullo, Lucia L Prieto-Godino, and Thomas Euler. Open labware: 3-d printing your own lab equipment. <em>PLoS biology</em>, 13(3):e1002086, 2015.</p>
+</aside>
+<aside class="footnote brackets" id="footcite-arancio2022equitable" role="note">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id11">8</a><span class="fn-bracket">]</span></span>
+<p>Julieta Arancio, Mayra Morales Tirado, and J Pearce. Equitable research capacity towards the sustainable development goals: the case for open science hardware. <em>J. Sci. Policy Gov</em>, 2022.</p>
+</aside>
+<aside class="footnote brackets" id="footcite-bonvoisin-2020" role="note">
+<span class="label"><span class="fn-bracket">[</span>9<span class="fn-bracket">]</span></span>
+<span class="backrefs">(<a role="doc-backlink" href="#id12">1</a>,<a role="doc-backlink" href="#id13">2</a>)</span>
+<p>Jérémy Bonvoisin, Jenny Molloy, Martin Häuer, and Tobias Wenzel. Standardisation of practices in open source hardware. <em>Journal of Open Hardware</em>, Aug 2020. <a class="reference external" href="https://doi.org/10.5334/joh.22">doi:10.5334/joh.22</a>.</p>
+</aside>
+<aside class="footnote brackets" id="footcite-bowser2021stitching" role="note">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id14">10</a><span class="fn-bracket">]</span></span>
+<p>Anne Bowser, Alex Long, Alexandra Novak, Alison Parker, and M Weinbert. Stitching together a solution: lessons from the open source hardware response to covid-19. <em>Report from the Open Hardware and COVID-19 Roundtable, convened by the Wilson Center’s Science and Technology Innovation Program (STIP) and the Engelberg Center on Innovation Law &amp; Policy at NYU Law</em>, 2021.</p>
+</aside>
+<aside class="footnote brackets" id="footcite-read2021ventmon" role="note">
+<span class="label"><span class="fn-bracket">[</span>11<span class="fn-bracket">]</span></span>
+<span class="backrefs">(<a role="doc-backlink" href="#id15">1</a>,<a role="doc-backlink" href="#id16">2</a>)</span>
+<p>Robert L Read, Lauria Clarke, and Geoff Mulligan. Ventmon: an open source inline ventilator tester and monitor. <em>HardwareX</em>, 9:e00195, 2021.</p>
+</aside>
+<aside class="footnote brackets" id="footcite-state2021" role="note">
+<span class="label"><span class="fn-bracket">[</span>12<span class="fn-bracket">]</span></span>
+<span class="backrefs">(<a role="doc-backlink" href="#id17">1</a>,<a role="doc-backlink" href="#id18">2</a>,<a role="doc-backlink" href="#id19">3</a>)</span>
+<p>Open Source Hardware Association. State of open source hardware 2021. <em>.</em>, 2021. URL: <a class="reference external" href="https://stateofoshw.oshwa.org/">https://stateofoshw.oshwa.org/</a>.</p>
+</aside>
+<aside class="footnote brackets" id="footcite-pujol2019obsessed" role="note">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id20">13</a><span class="fn-bracket">]</span></span>
+<p>Laia Pujol Priego and Jonathan Douglas Wareham. Obsessed with time? white rabbit at cern. <em>White Rabbit At CERN (March 2019). ESADE Business School Research Paper</em>, 2019.</p>
+</aside>
+<aside class="footnote brackets" id="footcite-camprodon2019smart" role="note">
+<span class="label"><span class="fn-bracket">[</span>14<span class="fn-bracket">]</span></span>
+<span class="backrefs">(<a role="doc-backlink" href="#id21">1</a>,<a role="doc-backlink" href="#id22">2</a>)</span>
+<p>Guillem Camprodon, Óscar González, Víctor Barberán, Máximo Pérez, Viktor Smári, Miguel Ángel de Heras, and Alejandro Bizzotto. Smart citizen kit and station: an open environmental monitoring system for citizen participation and scientific experimentation. <em>HardwareX</em>, 6:e00070, 2019.</p>
+</aside>
+</div>
+<hr class="footnotes docutils" />
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./contents"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="../intro.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Open Source Hardware Seminar</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="week2.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">2. Ideation and prototyping</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#open-source-hardware-definition-and-background">Open source hardware definition and background</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#open-source-hardware-in-science">Open source hardware in science</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#openness-in-practice">Openness in practice</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#motivations-for-engaging-with-osh">Motivations for engaging with OSH</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#challenges-of-osh-practice">Challenges of OSH practice</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#osh-and-standardization-covid-19-pandemic">OSH and standardization: COVID-19 pandemic</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#osh-applications">OSH applications</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#cases">Cases</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-white-rabbit-project">The White Rabbit project</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-smart-citizen-project">The Smart Citizen project</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#slides-for-download">Slides for download</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#bibliography">Bibliography</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Julieta Arancio, Robert Mies - Licensed CC-BY 4.0
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=5b4479735964841361fd"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

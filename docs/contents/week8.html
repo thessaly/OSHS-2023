@@ -1,0 +1,646 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>8. OSH communities &amp; governance &#8212; Open Source Hardware Seminar @TU Berlin 2023</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=5b4479735964841361fd" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=5b4479735964841361fd" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=5b4479735964841361fd" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd" />
+  <script src="../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=5b4479735964841361fd"></script>
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'contents/week8';</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Suggested activities &amp; evaluation" href="week9.html" />
+    <link rel="prev" title="7. Emerging business models" href="week7.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="../intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/logo.png" class="logo__image only-light" alt="Open Source Hardware Seminar @TU Berlin 2023 - Home"/>
+    <script>document.write(`<img src="../_static/logo.png" class="logo__image only-dark" alt="Open Source Hardware Seminar @TU Berlin 2023 - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../intro.html">
+                    Open Source Hardware Seminar
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="week1.html">1. Introduction to OSH</a></li>
+<li class="toctree-l1"><a class="reference internal" href="week2.html">2. Ideation and prototyping</a></li>
+<li class="toctree-l1"><a class="reference internal" href="week3.html">3. Collaboration in OSH</a></li>
+<li class="toctree-l1"><a class="reference internal" href="week4.html">4. OSH workflows and tools</a></li>
+<li class="toctree-l1"><a class="reference internal" href="week5.html">5. Documenting for reuse</a></li>
+<li class="toctree-l1"><a class="reference internal" href="week6.html">6. Licences &amp; standards</a></li>
+<li class="toctree-l1"><a class="reference internal" href="week7.html">7. Emerging business models</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">8. OSH communities &amp; governance</a></li>
+<li class="toctree-l1"><a class="reference internal" href="week9.html">Suggested activities &amp; evaluation</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/thesaly/OSHS-2023" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/thesaly/OSHS-2023/issues/new?title=Issue%20on%20page%20%2Fcontents/week8.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/contents/week8.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>8. OSH communities & governance</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#communities-in-oshs">Communities in OSHS</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#how-is-work-organized-in-osh">How is work organized in OSH?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#governance-models-for-open-source">Governance models for open source</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#implications-of-governance-non-choice">Implications of governance (non)choice</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#slides-for-download">Slides for download</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#bibliography">Bibliography</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section id="osh-communities-governance">
+<h1>8. OSH communities &amp; governance<a class="headerlink" href="#osh-communities-governance" title="Permalink to this heading">#</a></h1>
+<figure class="align-default" id="gov1-fig">
+<a class="reference internal image-reference" href="../_images/42.png"><img alt="../_images/42.png" src="../_images/42.png" style="width: 674.4000000000001px; height: 304.8px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 37 </span><span class="caption-text">Source: <a class="reference external" href="https://communityrule.info">Community Rules</a></span><a class="headerlink" href="#gov1-fig" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>A governance model refers to the structure, processes, and mechanisms put in place to ensure effective decision-making, control, and oversight within an organization, community, or any structured group. It defines how authority, responsibility, and accountability are distributed and exercised.</p>
+<p>Governance models define how decisions are made within the organization including mechanisms for gathering input, deliberation, and final decision-making. They also describe the formal hierarchy, roles, and responsibilities, reporting lines, roles of leadership, and the overall structure of the entity.</p>
+<p>It makes explicit which are the rules, guidelines, and standard operating procedures that govern the organization. These may cover a wide range of areas, including ethics, compliance, and operational protocols. They also describe how the implementation of these is evaluated, and what happens when these are broken. How individuals or entities within the organization are held accountable for their actions and decisions?</p>
+<p>Probably the most important aspect of governance models is that they outlien processes for resolving disputes or conflicts within the organization. This can include mediation, arbitration, or other conflict resolution mechanisms.</p>
+<p>Governance models are crucial for ensuring that organizations operate transparently, ethically, and efficiently. They provide a framework for decision-making that aligns with the organization’s goals and values, and they help establish a system of checks and balances to prevent abuses of power. Governance models can vary widely depending on the type of organization, its size, purpose, and the regulatory environment in which it operates.</p>
+<section id="communities-in-oshs">
+<h2>Communities in OSHS<a class="headerlink" href="#communities-in-oshs" title="Permalink to this heading">#</a></h2>
+<p>Communities in OSH are heterogeneous, focusing either on projects, platforms or networks of networks. Some open hardware projects and their communities became so popular that you will hear about them, or the paradigm they represent, really often. One of these examples is Arduino, which enabled thousands to prototype electronic designs in an accessible way. Another example of huge activity is the 3D printing community, where you can find contributors everywhere working on models that go from the first RepRap to one of its current popular grand-grand-daughters, Prusa.</p>
+<p>Other communities gather around the field of application of what they are building. You will hear often about the Do It Yourself (DIY) or “maker” community, tweaking and creating designs for hobbist or educational purposes. When it comes to science, the Global Open Science Hardware (GOSH) is a “community of communities” bringing together people in or outside academia building tools for science and education. Specific fields have their own communities, like open source biology or open source optics.</p>
+<p>Networks like Hackteria gather lots of artists working with open hardware and DIY biology, while platforms like Appropedia collect open designs of tools for sustainable living. Online communities also form around platforms for sharing designs (Hackaday, Instructables, Hackster, KitSpace, etc) or tools needed for designing and building hardware.</p>
+</section>
+<section id="how-is-work-organized-in-osh">
+<h2>How is work organized in OSH?<a class="headerlink" href="#how-is-work-organized-in-osh" title="Permalink to this heading">#</a></h2>
+<p>Open-source communities tend to emerge and organise themselves organically, starting with a very specific need of an individual or small group of individuals. Communities are made up of volunteers and, sometimes, sponsored participants. Governance structures tend to appear much later, in response to growth and the need for responsive work, the emergence of conflic or new interactions with companies.</p>
+<p>The Onion model is a popular way of conceptualizing work in FOSS communities. It categorizes participants following a core-periphery structure according to their contributions to source code, and therefore their power to make decisions about a project. Core developers are often in charge of managerial work, like approving contributions, while the periphery often performs support work, like fixing bugs.</p>
+<figure class="align-default" id="onion-fig">
+<a class="reference internal image-reference" href="../_images/43.png"><img alt="../_images/43.png" src="../_images/43.png" style="width: 549.5px; height: 223.29999999999998px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 38 </span><span class="caption-text">The “onion model” in open source communities <a class="footnote-reference brackets" href="#footcite-crowston2003social" id="id1" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a></span><a class="headerlink" href="#onion-fig" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>Due to OSH being so recent, there are less studies on the community dynamics of OSH projects and their governance. Recent research<a class="footnote-reference brackets" href="#footcite-boujut2019open" id="id2" role="doc-noteref"><span class="fn-bracket">[</span>2<span class="fn-bracket">]</span></a> on OSH projects shows that there is also a “core” made up of a small number of participants. However, there is no standard way of organizing work. In some cases, but not at all the majority of them, projects followed a similar work division to design in industrial contexts: those who design, develop and prototype are different people. However in many others participants take part in at least two activities: those who design also develop and sometimes even prototype objects.</p>
+</section>
+<section id="governance-models-for-open-source">
+<h2>Governance models for open source<a class="headerlink" href="#governance-models-for-open-source" title="Permalink to this heading">#</a></h2>
+<p>Governance models are used in every organization, but as we mentioned in the beginning, they are often implicit in FOSS and OSH. Groups form and grow before they can consider how they will share power and deal with the conflicts that inevitably arise.</p>
+<p><a class="reference external" href="https://communityrule.info">Community Rules</a> is an interactive tool developed by a team of researchers at University of Colorado Boulder. It presents governance models and their components with examples, as building blocks that people can use to generate their own customized governance.</p>
+<p><strong>1. Benevolent Dictator</strong></p>
+<p>In this model, a single individual, often the project founder or a highly respected leader, holds significant decision-making authority over the project. This person is colloquially referred to as the “benevolent dictator”.</p>
+<p>Participation is open to anyone who wants to join, but the benevolent dictator can remove participants at will. The benevolent dictator has authority and can change the group’s governance as necessary. The benevolent dictator can invite participants to help with managing the group. When the group is sufficiently mature, the benevolent dictator will establish a more inclusive structure.</p>
+<p>The benevolent dictator is responsible for implementing—or delegating implementation of policies and other decisions. If participants are not happy with the benevolent dictator’s leadership, they may voice their concerns or leave the group</p>
+<div class="tip admonition">
+<p class="admonition-title">Example</p>
+<p><strong>Python.</strong> Its creator, Guido van Rossum, served as the benevolent dictator before stepping down from the position in 2018. Upon van Rossum’s resignation, the Python Software Foundation adopted an elected board model of governance. The new model employs a five-person steering committee elected by core developers that determines standardized practices for the programming language.</p>
+</div>
+<p><strong>2. Circles</strong></p>
+<p>Units called circles have the ability to decide and act on matters in their domains, which their members agree on through a council. To join, a person must be welcomed into a particular circle according to its
+policies.</p>
+<p>Representatives of circles regularly meet in a council to coordinate efforts and determine the domains of each circle, as well as to add or remove circles from the council. A circle can create roles for its members and assign authority over specified sub-domains. Circles and the council use consent to make decisions. Consent means that nobody presents a serious objection to a proposal.</p>
+<div class="tip admonition">
+<p class="admonition-title">Example</p>
+<p><strong><a class="reference external" href="https://MeerkatMedia.org">Meerkat Media</a>.</strong> Artists associated with the Meerkat Media Collective receive a monthly stipend to pursue independent or collaborative projects. Commissioned projects are democratically run through the Meerkat Media Workers Cooperative</p>
+</div>
+<p><strong>3. Consensus</strong></p>
+<p>Decisions that affect the group collectively should involve participation of all participants. New participants may join as long as no others object. Participants may be removed if a proposal to do so passes the consensus process.</p>
+<p>People who make proposals that the group agrees on is responsible for its implementation, delegating as necessary and as participants are willing to help. Any participant may make a proposal at any group meeting to which all participants are invited. The proposal should be discussed and modified through
+open conversation in order to address all concerns. A decision is made only if there are no serious objections remaining.</p>
+<div class="tip admonition">
+<p class="admonition-title">Example</p>
+<p><strong><a class="reference external" href="https://Boell.de/en/2016/01/21/venezuela-we-are-one-big-conversation">CECOSESOLA</a>.</strong> CECOSESOLA is a consensus-based cooperative based on mutual trust and respect. Everyday decisions can be made by individuals or subgroups but must adhere to a common criteria that is established and revised through member consensus.</p>
+</div>
+<p><strong>4. Do-ocracy</strong>
+Those who take initiative to do something in the group can decide how they do it. New participants may join as long as no others object. Participants may be removed if a proposal to do so passes the consensus process.</p>
+<p>People who make proposals that the group agrees on is responsible for its implementation, delegating as necessary and as participants are willing to help. Any participant may make a proposal at any group meeting to which all particpants are invited. The proposal should be discussed and modified through
+open conversation in order to address all concerns. A decision is made only if there are no serious objections remaining.</p>
+<div class="tip admonition">
+<p class="admonition-title">Example</p>
+<p><strong><a class="reference external" href="https://Social.coop/about">Social.coop</a>.</strong> Tasks are done through voluntary committees, although some roles come with small stipends. Any member may make a proposal for a policy, which can be passed through a vote of the membership. All financial transactions are public.</p>
+</div>
+<p><strong>5. Elected board</strong>
+An elected board determines policies and organizes their implementation. The board sets policies for membership and removal.</p>
+<p>A board is responsible for making decisions and implementing them, including by delegating necessary work to others. Any community participant can be a nominee for board positions. In regularly scheduled elections, the nominees with the largest number of votes become board members. The board makes deci-
+sions by majority vote.</p>
+<div class="tip admonition">
+<p class="admonition-title">Example</p>
+<p><strong><a class="reference external" href="https://SewaFederation.org/about-us">SEWA Cooperative Federation</a>.</strong> The federation’s members, which are themselves cooperatives governed by their worker-members, elect a board of nine to fifteen members. This board governs the federation and elects its president.</p>
+</div>
+<p><strong>6. Jury</strong>
+Proposals are shaped and decided on by randomly selected juries. Juries set policies for membership
+and removal.</p>
+<p>Temporary juries form by a random selection. All participants have the right to initiate proposals, sign them, and serve on juries. If a certain percentage of participants signs a proposal, a jury is formed to study it, revise it, and agree on it unanimously. A proposal agreed on by a jury becomes binding for the group.</p>
+<div class="tip admonition">
+<p class="admonition-title">Example</p>
+<p><strong><a class="reference external" href="https://CNDP.us/forest-of-dean-citizens-jury">Forest of Dean District Citizen Jury</a>.</strong> A group of eighteen residents were selected to form the jury responsible for determining the location of the new
+hospital. The jury considered demographics, potential population growth, and transportation before voting on a final location.</p>
+</div>
+<p><strong>7. Petition</strong>
+All participants can propose and vote on proposals for the group. Petitions set policies for membership
+and removal; any structures must be established by petition.</p>
+<p>All participants have the right to initiate proposals, sign them, and vote in resulting referendums. If a certain percentage of participants signs a proposal, it goes to a referendum. If a majority of
+participants vote for it within a certain period of time, it becomes binding for the group.</p>
+<div class="tip admonition">
+<p class="admonition-title">Example</p>
+<p><strong><a class="reference external" href="https://Decide.madrid.es">Decide Madrid</a>.</strong> The Madrid City Council encourages citizen involvement in governance through the use of Decide Madrid. Citizens work together to produce and ratify legislation that benefits the entire community</p>
+</div>
+<p><strong>8. Self-appointed board</strong>
+A board that selects its own members determines policies and organizes their implementation. The board sets policies for membership and removal.</p>
+<p>A board is responsible for making decisions and implementing them, including by delegating necessary work to others. The board elects its own members and makes decisions by majority vote.</p>
+<div class="tip admonition">
+<p class="admonition-title">Example</p>
+<p><strong><a class="reference external" href="https://OversightBoard.com">Facebook Oversight Board</a>.</strong> The initial board members were chosen by Facebook in collaboration with consulting firms and executive search firms. Facebook interviewed
+nominees and selected four co-chairs for the board who then helped choose the remaining sixteen board members. Although anyone can be nominated to serve as a board member, Facebook and the board approve new board members.</p>
+</div>
+</section>
+<section id="implications-of-governance-non-choice">
+<h2>Implications of governance (non)choice<a class="headerlink" href="#implications-of-governance-non-choice" title="Permalink to this heading">#</a></h2>
+<p>The absence of a governance model in an open source project can lead to various challenges and implications, potentially impacting the project’s sustainability, community dynamics, and overall success.</p>
+<p>Probably the most immediate consequences are related to decision-making. Without a defined governance model, there may be a lack of clarity on how decisions are made and who has the authority to make them. This can result in confusion and uncertainty among contributors. Decisions may be made inconsistently, leading to disputes and disagreements within the community. In the absence of a structured process, decisions might be influenced by individual preferences rather than project goals.</p>
+<p>The community can start witnessing how participants disengage. Contributors may become frustrated if they perceive a lack of fairness or transparency in decision-making. This frustration can lead to a decline in contributions, diminishing trust within the community. Contributors may be hesitant to invest time and effort into a project if they are uncertain about the project’s future and decision-making processes.</p>
+<p>Projects without a governance model may struggle to evolve and adapt to changing circumstances. Lack of clear leadership and decision-making processes can result in project stagnation. In the absence of a clear path for resolving disagreements or addressing dissatisfaction, contributors may choose to fork the project, creating a separate, independent version. This can lead to fragmentation and a loss of the collaborative benefits of a unified community.</p>
+<p>A governance model helps ensure that decisions are made inclusively, considering the perspectives of various community members. Without such a model, there is a risk of excluding certain contributors or groups from the decision-making process. Adressing and resolving instances of community member misconduct may be challenging. A code of conduct without a mechanism for enforcement is not effective.</p>
+<p>A lack of governance, in conclusion, affects sustainability. Projects with no governance model may be overly dependent on individual contributors. If key contributors leave or lose interest, the project may die. There may be no clear process for selecting new leaders or maintainers, which can jeopardize the project’s long-term viability.</p>
+<figure class="align-default" id="oshcollab2-fig">
+<a class="reference internal image-reference" href="../_images/46.png"><img alt="../_images/46.png" src="../_images/46.png" style="width: 452.2px; height: 341.59999999999997px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 39 </span><span class="caption-text">Implications of model choice in everyday practice</span><a class="headerlink" href="#oshcollab2-fig" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+</section>
+<section id="slides-for-download">
+<h2>Slides for download<a class="headerlink" href="#slides-for-download" title="Permalink to this heading">#</a></h2>
+<p><a class="reference download internal" download="" href="../_downloads/1c37c89fc5bd99e94662948f71874cf7/OSHS_unit8.pdf"><span class="xref download myst">Link to slides</span></a></p>
+</section>
+<section id="bibliography">
+<h2>Bibliography<a class="headerlink" href="#bibliography" title="Permalink to this heading">#</a></h2>
+<div class="docutils container" id="id3">
+<aside class="footnote brackets" id="footcite-crowston2003social" role="note">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id1">1</a><span class="fn-bracket">]</span></span>
+<p>Kevin Crowston and James Howison. The social structure of open source software development teams. 2003.</p>
+</aside>
+<aside class="footnote brackets" id="footcite-boujut2019open" role="note">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id2">2</a><span class="fn-bracket">]</span></span>
+<p>Jean-François Boujut, Franck Pourroy, Philippe Marin, Jason Dai, and Gilles Richardot. Open source hardware communities: investigating participation in design activities. In <em>Proceedings of the Design Society: International Conference on Engineering Design</em>, volume 1, 2307–2316. Cambridge University Press, 2019.</p>
+</aside>
+</div>
+<hr class="footnotes docutils" />
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./contents"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="week7.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">7. Emerging business models</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="week9.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Suggested activities &amp; evaluation</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#communities-in-oshs">Communities in OSHS</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#how-is-work-organized-in-osh">How is work organized in OSH?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#governance-models-for-open-source">Governance models for open source</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#implications-of-governance-non-choice">Implications of governance (non)choice</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#slides-for-download">Slides for download</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#bibliography">Bibliography</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Julieta Arancio, Robert Mies - Licensed CC-BY 4.0
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=5b4479735964841361fd"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

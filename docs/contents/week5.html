@@ -1,0 +1,660 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>5. Documenting for reuse &#8212; Open Source Hardware Seminar @TU Berlin 2023</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=5b4479735964841361fd" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=5b4479735964841361fd" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=5b4479735964841361fd" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd" />
+  <script src="../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=5b4479735964841361fd"></script>
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'contents/week5';</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="6. Licences &amp; standards" href="week6.html" />
+    <link rel="prev" title="4. OSH workflows and tools" href="week4.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="../intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/logo.png" class="logo__image only-light" alt="Open Source Hardware Seminar @TU Berlin 2023 - Home"/>
+    <script>document.write(`<img src="../_static/logo.png" class="logo__image only-dark" alt="Open Source Hardware Seminar @TU Berlin 2023 - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../intro.html">
+                    Open Source Hardware Seminar
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="week1.html">1. Introduction to OSH</a></li>
+<li class="toctree-l1"><a class="reference internal" href="week2.html">2. Ideation and prototyping</a></li>
+<li class="toctree-l1"><a class="reference internal" href="week3.html">3. Collaboration in OSH</a></li>
+<li class="toctree-l1"><a class="reference internal" href="week4.html">4. OSH workflows and tools</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">5. Documenting for reuse</a></li>
+<li class="toctree-l1"><a class="reference internal" href="week6.html">6. Licences &amp; standards</a></li>
+<li class="toctree-l1"><a class="reference internal" href="week7.html">7. Emerging business models</a></li>
+<li class="toctree-l1"><a class="reference internal" href="week8.html">8. OSH communities &amp; governance</a></li>
+<li class="toctree-l1"><a class="reference internal" href="week9.html">Suggested activities &amp; evaluation</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/thesaly/OSHS-2023" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/thesaly/OSHS-2023/issues/new?title=Issue%20on%20page%20%2Fcontents/week5.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/contents/week5.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>5. Documenting for reuse</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#about-your-project">About your project</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#for-users">For users</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#for-contributors">For contributors</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#contribution-guidelines">Contribution guidelines</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#bill-of-materials-bom">Bill of materials (BoM)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#source-files-cad">Source files: CAD</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#source-files-electronics">Source files: Electronics</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sharing-osh">Sharing OSH</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#making-hardware-discoverable">Making hardware discoverable</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#making-hardware-citable">Making hardware citable</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#documentation-checklists">Documentation checklists</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#slides-for-download">Slides for download</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#bibliography">Bibliography</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section id="documenting-for-reuse">
+<h1>5. Documenting for reuse<a class="headerlink" href="#documenting-for-reuse" title="Permalink to this heading">#</a></h1>
+<figure class="align-default" id="ometer-fig">
+<a class="reference internal image-reference" href="../_images/28.png"><img alt="../_images/28.png" src="../_images/28.png" style="width: 631.0px; height: 334.0px;" /></a>
+</figure>
+<section id="about-your-project">
+<h2>About your project<a class="headerlink" href="#about-your-project" title="Permalink to this heading">#</a></h2>
+<p>Your OSH project should at a minimum provide a <em>license</em> together with a <em>README file</em> or website with all the basic, general information a newcomer needs to get oriented. Include a general description of the hardware’s identity and purpose, written as much as possible for a general audience.</p>
+<p>Your goal is to communicate quickly your value proposition. What problem are you trying to solve? How your project is meant to address it, for whom? Explain what the project is and what it is for, before you get into the technical details.</p>
+<p>Document the current state, ongoing development, and/or any future plans for the project. Add information on available resources and recommended practices to ensure everyone is on the same page. Provide overarching as well as short-term goals and describe expected outcomes to guide contributors on what kind of collaboration you are looking for.</p>
+<p>Finally, provide a contact point, list all the people working on the project and acknowledge contributors.</p>
+</section>
+<section id="for-users">
+<h2>For users<a class="headerlink" href="#for-users" title="Permalink to this heading">#</a></h2>
+<p>If your project comes as a kit, or if it demands any kind of actions from the user in order to function, you should write a brief user manual or assembly instructions. Take particular care about safety instructions. OSH users or makers are not always formally trained engineers and may not be able to easily differentiate between dangerous and safe manipulations.</p>
+<p>Your project documentation may also include a functional overview of the project’s parts or modules, as well as a short description of the software needed to use the hardware. Also give an overview of the state of the hardware, software and documentation (current state, ongoing development, and/or any future plans for the project), and other information you think may be useful for newcomers.</p>
+<p>Think about your audience when writing OSH documentation. Your project might be reused by people with different skills, roles, objectives, and socio-economic and cultural environments. Many OSH projects are currently used by people in contexts that are completely different from the original developer’s intention.</p>
+<p>In the example below, pay special attention at how the team lowers access barriers for different users. They produce a clear and attractive README, written tutorials and video demonstrations in YouTube.</p>
+<div class="admonition-an-example-from-uc2-open-and-modular-optical-toolbox-https-github-com-openuc2-uc2-git admonition">
+<p class="admonition-title">An example from <a class="reference external" href="https://github.com/openUC2/UC2-GIT">UC2 - Open and Modular Optical Toolbox</a></p>
+<p><img alt="UC2 readme file" src="../_images/29.png" /></p>
+</div>
+</section>
+<section id="for-contributors">
+<h2>For contributors<a class="headerlink" href="#for-contributors" title="Permalink to this heading">#</a></h2>
+<p>Sharing source code for others to contribute is pretty straight forward. In OSH projects, however, the source comes in the form of multiple product- and process-related documentation contents, and therefore “opening” to enable access / participation in the development becomes more complex<a class="footnote-reference brackets" href="#footcite-bonvoisin2017source" id="id1" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a>. Here we will go through some of the most commonly acknowledged items to consider when opening up hardware so others can contribute to your project.</p>
+<section id="contribution-guidelines">
+<h3>Contribution guidelines<a class="headerlink" href="#contribution-guidelines" title="Permalink to this heading">#</a></h3>
+<p>Contribution guidelines serve as a set of recommendations and best practices for individuals looking to contribute to a project. These guidelines help streamline the contribution process and ensure a consistent and positive experience for both contributors and maintainers.</p>
+<ol class="arabic simple">
+<li><p>Effective communication is crucial. Clearly articulate how contributors can get in touch, ask questions, and discuss potential contributions. Provide channels such as forums, mailing lists, or chat platforms.</p></li>
+<li><p>Establish and communicate design and coding standards, conventions, and best practices. This ensures consistency across the codebase and makes it easier for maintainers to review and merge contributions.</p></li>
+<li><p>Outline expectations for contributor’s documentation, both for software, hardware and general project documentation. This may include design comments, README files, and any additional documentation necessary for users and contributors.</p></li>
+<li><p>Show contributors how to use your VCS to contribute. Often, this means providing templates for issues and pull requests to guide contributors in providing essential information. This helps maintainers understand the context, purpose, and impact of the contribution.</p></li>
+<li><p>Define the steps for making contributions. This includes forking the repository, creating a new branch, submitting a pull request, and any additional steps involved in the review and merging process. Make your acceptance criteria explicit: which kind of contributions will be approved?</p></li>
+<li><p>Emphasize the importance of adhering to the project’s licensing terms. Ensure that contributors understand how their contributions will be licensed and distributed.</p></li>
+<li><p>Establish a code of conduct that promotes a respectful and inclusive community. Encourage positive and constructive interactions, and make it clear that disrespectful behavior will not be tolerated.</p></li>
+</ol>
+<p>As projects grow, so grow the number of contributions. This can be hard for maintainers, who find themselves dealing with a huge workload in reviewing and approving contributions. Encourage maintainers to be responsive; acknowledge contributions promptly, provide feedback, and guide contributors through the process.</p>
+<div class="admonition-contents-of-contributors-guidelines-the-turing-way-https-github-com-the-turing-way-the-turing-way-blob-main-contributing-md admonition">
+<p class="admonition-title">Contents of contributors guidelines, <a class="reference external" href="https://github.com/the-turing-way/the-turing-way/blob/main/CONTRIBUTING.md">The Turing Way</a></p>
+<p><img alt="TuringWay contributing file" src="../_images/30.png" /></p>
+</div>
+</section>
+<section id="bill-of-materials-bom">
+<h3>Bill of materials (BoM)<a class="headerlink" href="#bill-of-materials-bom" title="Permalink to this heading">#</a></h3>
+<p>It should contain information in a way that is makes it easy for interested people to know if they will be able to source all needed materials and if they have the necessary tools and skills to replicate your project.</p>
+<p>A good starting point contains:</p>
+<ul class="simple">
+<li><p>what parts were used</p></li>
+<li><p>how can you source them, e.g. with links to suppliers</p></li>
+<li><p>why they were used/can you replace them</p></li>
+<li><p>what tools and skills are needed are needed to replicate the designs (do I need a laser cutter? Do I need to know how to use a sewing machine?)</p></li>
+</ul>
+<p>Documenting good BoM that can enable reuse and contribution can be hard. It is convenient to keep in mind that not everyone has access to same vendors. If you live in Europe and North America, you have easy access to everything that is listed on Amazon, which is not available in most parts of the world. Listing what you are using, and why you are using it, are good practices so others can follow the decision criteria and come up with a local replacement.</p>
+<p>Another good practice is to reference more than one distributor in the BoM. Some projects open an “issue/call for participation” to ask interested people to create a “local bill of materials”. This is a good way to foster participation and inclusion.</p>
+<p>Similar to the BoM, some projects include a bill of tools, showing which tools contributors will need to source to replicate your project. Similarly, bills of skills reference which skills people need to have to replicate a project.</p>
+<div class="admonition-an-example-from-the-openflexure-project-https-openflexure-org-it-s-interactive-scroll-down admonition">
+<p class="admonition-title">An example from the <a class="reference external" href="https://openflexure.org">OpenFlexure Project</a> (it’s interactive, scroll down!)</p>
+<embed src="https://build.openflexure.org/openflexure-microscope/v7.0.0-beta1/high_res_microscope_BOM.html" style="width:100%; height: 300px;">
+</div>
+</section>
+<section id="source-files-cad">
+<h3>Source files: CAD<a class="headerlink" href="#source-files-cad" title="Permalink to this heading">#</a></h3>
+<p>With the rise of affordable additive and subtractive manufacturing machines like 3D-printers and CNC-mills, individuals are now able to turn their garage, basement, backyard into a small factory to develop and produce hardware.</p>
+<p>Digital modelling and fabrication is a design and production process that combines 3D modelling or computing-aided design (CAD) with additive and subtractive manufacturing. Most OSH projects involve some kind of digitally assisted hardware design, as it has become very easy to share builds online and thus enable distributed collaboration.</p>
+<figure class="align-default" id="cad-fig">
+<a class="reference internal image-reference" href="../_images/26.png"><img alt="../_images/26.png" src="../_images/26.png" style="width: 567.6999999999999px; height: 142.79999999999998px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 27 </span><span class="caption-text">Differences between export and source CAD files <a class="footnote-reference brackets" href="#footcite-ohm" id="id2" role="doc-noteref"><span class="fn-bracket">[</span>2<span class="fn-bracket">]</span></a>.</span><a class="headerlink" href="#cad-fig" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+</section>
+<section id="source-files-electronics">
+<h3>Source files: Electronics<a class="headerlink" href="#source-files-electronics" title="Permalink to this heading">#</a></h3>
+<p>Sharing your electronics designs is a big step towards enabling collaboration on your OSH project. KiCAD is a free and open source CAD tool for designing electronics that is widely used even outside the open source community. Its breakthrough began when CERN started to invest the money they would have spent for software licenses into the development of this open source alternative. KiCAD now is a match for proprietary electronics CAD software like Autodesks Eagle.</p>
+<p>Proprietary tools for hardware design are very efficient, but carry the risk of lock-in. In 2020, Autodesk announced a major license change which cut back a lot of features of the non-commercial license, locked out many users and caused an uproar in the community. Due to this, FreeCAD, a free and open source alternative to Fusion 360, got a lot of attention and support.</p>
+</section>
+</section>
+<section id="sharing-osh">
+<h2>Sharing OSH<a class="footnote-reference brackets" href="#footcite-the-turing-way-community-2023-7625728" id="id3" role="doc-noteref"><span class="fn-bracket">[</span>3<span class="fn-bracket">]</span></a><a class="headerlink" href="#sharing-osh" title="Permalink to this heading">#</a></h2>
+<p>One of the goals of making OSH is to share the documentation so others can reuse your project (build upon, improve, derive from). Once a project is shared, it can be continuously developed and manintained.</p>
+<p>For OSH to be effectively adopted, reused, and developed further, the hardware documentation and other relevant information needs to be shared in a way that is easily accessible at no cost. The global open hardware community utilizes a variety of platforms and online resources to share their work and enable others to collborate on different projects.</p>
+<p>The easiest way to share an open hardware project is by sharing it online. There is no best platform or place to do this, as it depends on the specifics of your project. However, some platforms commonly used for OSH are <a class="reference external" href="https://github.com/">GitHub</a>, <a class="reference external" href="https://about.gitlab.com/">GitLab</a>, <a class="reference external" href="https://wikifactory.com/">Wikifactory</a> and <a class="reference external" href="https://hackaday.io/">hackaday.io</a>.</p>
+<section id="making-hardware-discoverable">
+<h3>Making hardware discoverable<a class="headerlink" href="#making-hardware-discoverable" title="Permalink to this heading">#</a></h3>
+<p>There is (yet) no straightforward way to let others to know about a project online. Here we list some actions you may take in order to make your project more visible, reach more people, and improve the chances of reproducibility:</p>
+<ul class="simple">
+<li><p>Use a commonly used platform; often they have a discovery page and people expect your project to be on such platforms.</p></li>
+<li><p>Use metadata to discribe your project, apart from just your technical data it is also important to share the metadata of your project, for example a short disciption, a statement of the license, the context of your project. Adding a <a class="reference external" href="https://www.internetofproduction.org/openknowhow">Open-Know-How manifest</a> yaml is a good option.</p></li>
+<li><p>Refer to the guide for communication <a class="reference external" href="https://the-turing-way.netlify.app/communication/comms-overview#cm-comms-overview">Overview of the Guide for Communication</a> and make a presskit or media content for others to easily share your project on other blogs or websites.</p></li>
+</ul>
+<p>In academia, researchers may also publish their hardware (usually at the demonstrator stage), as peer-reviewed articles and archive a version to generate a DOI.</p>
+</section>
+<section id="making-hardware-citable">
+<h3>Making hardware citable<a class="headerlink" href="#making-hardware-citable" title="Permalink to this heading">#</a></h3>
+<p>In contrast to data and software, there is no recommendation for making hardware citable yet. However, we think it is good practice to treat hardware citation similarly to other research ouptuts <a class="reference external" href="https://the-turing-way.netlify.app/communication/citable#cm-citable">Making Research Objects Citable</a>.</p>
+<p>Making open hardware citable is indeed useful for academic and research output. The use of archives that can assign persistent identifiers (DOI) can help to guarantee specific versions/releases of the hardware project available over the long term. Though within the open hardware community this is not the practice, it would be beneficial to adopt going forward. For research to be reproducible, long term archiving through a platform that is dedicated to it would be necessary.</p>
+<p><a class="reference external" href="https://zenodo.org/">Zenodo</a> is a good example of the type of archive that can issue a persistent identifier like a DOI. Zenodo also has an integration with Github such that projects that are shared and developed there can be archived with ease and a DOI obtained for a specifc version/release.</p>
+</section>
+</section>
+<section id="documentation-checklists">
+<h2>Documentation checklists<a class="headerlink" href="#documentation-checklists" title="Permalink to this heading">#</a></h2>
+<p>The following documentation checklists may orient you when starting your project documentation: <a class="reference download internal" download="" href="../_downloads/b5d8b1b93f52cbc96734b64fbf36918e/OSHS_unit5_checklist.pdf"><span class="xref download myst">Technical documentation contents</span></a>. They are categorized into process documentation and product documentation.</p>
+</section>
+<section id="slides-for-download">
+<h2>Slides for download<a class="headerlink" href="#slides-for-download" title="Permalink to this heading">#</a></h2>
+<p><a class="reference download internal" download="" href="../_downloads/186095a01edfe32a505ff871a5a1540e/OSHS_unit5.pdf"><span class="xref download myst">Link to slides</span></a></p>
+</section>
+<section id="bibliography">
+<h2>Bibliography<a class="headerlink" href="#bibliography" title="Permalink to this heading">#</a></h2>
+<div class="docutils container" id="id4">
+<aside class="footnote brackets" id="footcite-bonvoisin2017source" role="note">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id1">1</a><span class="fn-bracket">]</span></span>
+<p>Jérémy Bonvoisin, Robert Mies, Jean-François Boujut, and Rainer Stark. What is the “source” of open source hardware? <em>Journal of Open Hardware</em>, 2017.</p>
+</aside>
+<aside class="footnote brackets" id="footcite-ohm" role="note">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id2">2</a><span class="fn-bracket">]</span></span>
+<p>Alexander Kutschera Julieta Arancio, Andre Chagas. Open hardware makers. URL: <a class="reference external" href="https://curriculum.openhardware.space">https://curriculum.openhardware.space</a>.</p>
+</aside>
+<aside class="footnote brackets" id="footcite-the-turing-way-community-2023-7625728" role="note">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id3">3</a><span class="fn-bracket">]</span></span>
+<p>The Turing Way Community. The Turing Way: A handbook for reproducible, ethical and collaborative research. <em>.</em>, February 2023. URL: <a class="reference external" href="https://doi.org/10.5281/zenodo.7625728">https://doi.org/10.5281/zenodo.7625728</a>, <a class="reference external" href="https://doi.org/10.5281/zenodo.7625728">doi:10.5281/zenodo.7625728</a>.</p>
+</aside>
+</div>
+<hr class="footnotes docutils" />
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./contents"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="week4.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">4. OSH workflows and tools</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="week6.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">6. Licences &amp; standards</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#about-your-project">About your project</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#for-users">For users</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#for-contributors">For contributors</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#contribution-guidelines">Contribution guidelines</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#bill-of-materials-bom">Bill of materials (BoM)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#source-files-cad">Source files: CAD</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#source-files-electronics">Source files: Electronics</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sharing-osh">Sharing OSH</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#making-hardware-discoverable">Making hardware discoverable</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#making-hardware-citable">Making hardware citable</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#documentation-checklists">Documentation checklists</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#slides-for-download">Slides for download</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#bibliography">Bibliography</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Julieta Arancio, Robert Mies - Licensed CC-BY 4.0
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=5b4479735964841361fd"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

@@ -1,0 +1,771 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>6. Licences &amp; standards &#8212; Open Source Hardware Seminar @TU Berlin 2023</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=5b4479735964841361fd" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=5b4479735964841361fd" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=5b4479735964841361fd" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd" />
+  <script src="../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=5b4479735964841361fd"></script>
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'contents/week6';</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="7. Emerging business models" href="week7.html" />
+    <link rel="prev" title="5. Documenting for reuse" href="week5.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="../intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/logo.png" class="logo__image only-light" alt="Open Source Hardware Seminar @TU Berlin 2023 - Home"/>
+    <script>document.write(`<img src="../_static/logo.png" class="logo__image only-dark" alt="Open Source Hardware Seminar @TU Berlin 2023 - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../intro.html">
+                    Open Source Hardware Seminar
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="week1.html">1. Introduction to OSH</a></li>
+<li class="toctree-l1"><a class="reference internal" href="week2.html">2. Ideation and prototyping</a></li>
+<li class="toctree-l1"><a class="reference internal" href="week3.html">3. Collaboration in OSH</a></li>
+<li class="toctree-l1"><a class="reference internal" href="week4.html">4. OSH workflows and tools</a></li>
+<li class="toctree-l1"><a class="reference internal" href="week5.html">5. Documenting for reuse</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">6. Licences &amp; standards</a></li>
+<li class="toctree-l1"><a class="reference internal" href="week7.html">7. Emerging business models</a></li>
+<li class="toctree-l1"><a class="reference internal" href="week8.html">8. OSH communities &amp; governance</a></li>
+<li class="toctree-l1"><a class="reference internal" href="week9.html">Suggested activities &amp; evaluation</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/thesaly/OSHS-2023" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/thesaly/OSHS-2023/issues/new?title=Issue%20on%20page%20%2Fcontents/week6.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/contents/week6.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>6. Licences & standards</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-an-open-source-licence">What is an open source licence?</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#public-domain-open-source">Public domain, open-source…</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#approaches-to-licensing">Approaches to licensing</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#licences-in-osh">Licences in OSH</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-can-be-licensed">What can be licensed?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#how-to-choose-a-licence">How to choose a licence</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#standards-in-osh">Standards in OSH</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#legal-aspects-documentation">Legal aspects &amp; documentation</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#towards-industry-adoption">Towards industry adoption</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#increasing-discoverability">Increasing discoverability</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#slides-for-download">Slides for download</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#bibliography">Bibliography</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section id="licences-standards">
+<h1>6. Licences &amp; standards<a class="headerlink" href="#licences-standards" title="Permalink to this heading">#</a></h1>
+<section id="what-is-an-open-source-licence">
+<h2>What is an open source licence?<a class="headerlink" href="#what-is-an-open-source-licence" title="Permalink to this heading">#</a></h2>
+<p>Open source licenses are legal instruments that govern the use, modification, and distribution of open source products. OSH licences have historical precursors in FOSS licences and community definitions<a class="footnote-reference brackets" href="#footcite-luis2019open" id="id1" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a>. These licenses are crucial components of the FOSS success, providing a framework for how software and hardware can be shared, collaborated upon and used by individuals, organizations, and communities.</p>
+<p>Open licences are the concrete instruments were the freedoms for the user are established. This fosters a collaborative environment where individuals can contribute to and benefit from the collective knowledge and skills of the community. Contributors understand how their work can be used and how it can not, facilitating a transparent and cooperative approach to software and hardware development.</p>
+<figure class="align-default" id="lic1-fig">
+<a class="reference internal image-reference" href="../_images/31.png"><img alt="../_images/31.png" src="../_images/31.png" style="width: 653.8px; height: 293.29999999999995px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 28 </span><span class="caption-text">Basic concepts on open source licencing <a class="footnote-reference brackets" href="#footcite-beldiman2018bits" id="id2" role="doc-noteref"><span class="fn-bracket">[</span>2<span class="fn-bracket">]</span></a>.</span><a class="headerlink" href="#lic1-fig" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>Licenses provide legal clarity on the terms and conditions under which the software/hardware can be used, modified, and distributed. But they also play a critical role in demonstrating transparency that builds trust among users and contributors. Open licences can be thought of as an agreement within communities, describing conditions, obligations and moral orientations for the circulation of hardware designs.</p>
+<section id="public-domain-open-source">
+<h3>Public domain, open-source…<a class="headerlink" href="#public-domain-open-source" title="Permalink to this heading">#</a></h3>
+<p>When learning about open source licences it is not uncommon to be confused by other terms like public domain or copyright. These are different approaches to managing intellectual property rights. Public domain emphasizes complete freedom, copyright grants exclusive rights with limitations, and open licenses provide a structured way to share and collaborate while retaining copyright.</p>
+<p><strong>Copyright</strong> is a legal right that grants the creator of an original work exclusive rights to its use and distribution. These rights include the right to reproduce, distribute, perform, and display the work. Copyright restricts the use of a work without the explicit permission of the copyright holder. It provides a legal framework for creators to control how their work is used and to financially benefit from its exploitation. Copyright protection has a limited duration, which varies by jurisdiction. Once copyright expires, the work enters the public domain.</p>
+<p>Works in the <strong>public domain</strong> are not protected by copyright and are freely available for use by the public. They may include works where copyright has expired, works explicitly dedicated to the public domain by the creator, or works for which copyright never existed. No copyright restrictions apply to public domain works, allowing anyone to use, modify, and distribute them without seeking permission.</p>
+<p>Public domain status is typically achieved when copyright expires, which varies by jurisdiction. As examples, the works of William Shakespeare or Ludwig van Beethoven are in the public domain either by virtue of their having been created before copyright existed, or by their copyright term having expired. In other cases, like the <a class="reference external" href="https://www.si.edu/openaccess">Smithsonian Open Access</a> initiative launched in 2020, copyright is explicitly waived and released into the public domain as Creative Commons Zero (CC0).</p>
+<div class="tip admonition">
+<p class="admonition-title">Tip</p>
+<p><a class="reference external" href="https://creativecommons.org/public-domain/cc0/">Creative Commons Zero or CC0</a> “No rights reserved” enables scientists, educators, artists and other creators and owners of copyright- or database-protected content to waive those interests in their works and thereby place them as completely as possible in the public domain, so that others may freely build upon, enhance and reuse the works for any purposes without restriction under copyright or database law.</p>
+</div>
+<p><strong>Open licenses</strong> are legal instruments that accompany creative works and grant permissions beyond what default copyright laws allow. They are used in open source and creative commons contexts to facilitate sharing and collaboration. Open licenses retain copyright but grant specific permissions to users. The permissions may include the right to use, modify, and distribute the work, often with the requirement that derivative works also carry the same open license.</p>
+<figure class="align-default" id="pdom-fig">
+<a class="reference internal image-reference" href="../_images/32.png"><img alt="../_images/32.png" src="../_images/32.png" style="width: 438.3px; height: 351.90000000000003px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 29 </span><span class="caption-text">Key differences between public domain, open licences and all rights reserved copyright <a class="footnote-reference brackets" href="#footcite-chae2014" id="id3" role="doc-noteref"><span class="fn-bracket">[</span>3<span class="fn-bracket">]</span></a>.</span><a class="headerlink" href="#pdom-fig" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+</section>
+<section id="approaches-to-licensing">
+<h3>Approaches to licensing<a class="headerlink" href="#approaches-to-licensing" title="Permalink to this heading">#</a></h3>
+<p><strong>Copyleft</strong> is a general approach to licensing in the context of open-source software that emphasizes the freedom to use, modify, and distribute software while imposing the condition that any derivative works must also be distributed under <strong>the same license terms as the original work</strong>. In this way it aims to preserve free and open source principles by imposing reciprocal obligations on contributors/forkers.</p>
+<p>The concept of copyleft originated in the early 1980s within the context of the Free Software Foundation (FSF) and the GNU Project, both founded by Richard Stallman. Stallman initiated the GNU Project in 1983, with the goal of creating a free and open-source Unix-like operating system. The name GNU stands for “GNU’s Not Unix,” emphasizing the project’s goal of creating a Unix-compatible system that respects users’ freedom. In 1989, Richard Stallman introduced the GNU General Public License (GPL) as part of the GNU project. The GPL was designed to be a copyleft license, ensuring that software covered by the license remains free and open in perpetuity.</p>
+<p>Copyleft, as embodied in the GPL, was conceived as a legal mechanism to guarantee that the freedoms associated with free software would be preserved. It achieves this by requiring that any modified or extended versions of GPL-licensed software also be distributed under the terms of the GPL. In this way it prevents lock-in, or the creation of proprietary versions that restrict user freedoms. On the other hand, some argue that the reciprocal nature of copyleft licenses may limit the ability of the software to be integrated into proprietary projects and therefore its broader adoption.</p>
+<p>Over time, variations of the GPL and other copyleft licenses have been developed to address specific use cases. For example, the Lesser General Public License (LGPL) and the Affero General Public License (AGPL) are variations that adapt copyleft principles for different scenarios.</p>
+<figure class="align-default" id="popularlicences-fig">
+<a class="reference internal image-reference" href="../_images/33.png"><img alt="../_images/33.png" src="../_images/33.png" style="width: 295.4px; height: 299.59999999999997px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 30 </span><span class="caption-text">Most popular open source software licences in 2021 <a class="footnote-reference brackets" href="#footcite-rjjiii2023" id="id4" role="doc-noteref"><span class="fn-bracket">[</span>4<span class="fn-bracket">]</span></a>.</span><a class="headerlink" href="#popularlicences-fig" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p><strong>Permissive licenses</strong> are a category of open-source software licenses that grant users extensive freedom to use, modify, and distribute the software with minimal restrictions. Unlike copyleft licenses, permissive licenses impose fewer obligations on users regarding how they distribute derivative works. These licenses prioritize flexibility and allow developers to incorporate open-source code into both open and closed source projects.</p>
+<p>Permissive licenses grant users the freedom to use the software for any purpose, whether it be personal, commercial, or proprietary. Users are free to modify the source code of the software to suit their needs. There are typically no requirements to share modifications. Users can distribute the software and its modifications under different licenses, including proprietary licenses. There is no obligation to release the source code of derivative works.</p>
+<p>Examples of Permissive Licenses include the MIT License, one of the most widely used permissive licenses. It allows for almost unrestricted use, modification, and distribution of the software, with minimal requirements. The BSD License (2-clause and 3-clause) permits users to do anything they want with the code, including creating proprietary derivatives, as long as the original copyright notice is retained. Finally, the Apache License allows for the use, modification, and distribution of the software, with additional provisions addressing patent rights and indemnification.</p>
+<p>Permissive licenses aim to achieve a balance between openness and flexibility, allowing for broad usage and integration into various projects, including proprietary ones. They are suitable for developers who prioritize freedom of use and compatibility with commercial applications. However, as they do not require users to share modifications or improvements, this may limit contributions back to the open-source community.</p>
+<figure class="align-default" id="permissionstable-fig">
+<a class="reference internal image-reference" href="../_images/37.png"><img alt="../_images/37.png" src="../_images/37.png" style="width: 669.0px; height: 418.0px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 31 </span><span class="caption-text">Permission overview for software licences<a class="footnote-reference brackets" href="#footcite-the-turing-way-community-2023-7625728" id="id5" role="doc-noteref"><span class="fn-bracket">[</span>5<span class="fn-bracket">]</span></a></span><a class="headerlink" href="#permissionstable-fig" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+</section>
+</section>
+<section id="licences-in-osh">
+<h2>Licences in OSH<a class="headerlink" href="#licences-in-osh" title="Permalink to this heading">#</a></h2>
+<p>Similar to open software licenses, developers have the opportunity of choosing from more than one available license. But the transposition of legal aspects of software to hardware isn’t straightforward.</p>
+<p>At the moment, there are three main hardware licenses available:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://tapr.org/the-tapr-open-hardware-license/">TAPR OHL</a> - similar to GNU GPL license</p></li>
+<li><p><a class="reference external" href="https://http://solderpad.org/">Solderpad</a> - similar to Apache license</p></li>
+<li><p><a class="reference external" href="https://cern-ohl.web.cern.ch/">CERN-OHL</a> - its most recent version (v2.0) has three variants:
+- A strongly-reciprocal variant, CERN-OHL-S
+- A weakly-reciprocal variant, CERN-OHL-W
+- A permissive variant, CERN-OHL-P</p></li>
+</ul>
+<p>We reproduce below an extract from Murillo et al (2019)<a class="footnote-reference brackets" href="#footcite-luis2019open" id="id6" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a> that provides a very complete background on the emergence of licences for open source hardware, and fully recommend reading the full report for those interested in the topic:</p>
+<blockquote>
+<div><p>To address the challenge of establishing a solid legal framework for OH, the legal scholar John Ackermann, with the help of the FOSS expert Bruce Perens, drafted the first reciprocal licence, “Tucson Amateur Packet-Radio Open Hardware licence” (TAPR OHL) in 2007. Created in the context of the HAM radio community for helping hobbyists share hardware designs, TAPR was also introduced to create awareness with respect to the pitfalls of flexible, copyright-based open licensing, such as Creative Commons, for hardware projects.</p>
+<p>Two key definitions were introduced with this pioneer licensing effort: the definition of “documentation” which describes the set of design files, engineering drawings, and explanatory text, and that of “product” which refers to the fabricated hardware or parts of distribution kits. The reasoning behind this distinction is that the physical instantiation of a design is beyond the scope of copyright, except for a piece of hardware that embodies an artistic expression (Beldiman, 2018). One of the key contributions of TAPR was to include a provision for patent licensing, extending its role to a fundamental
+part of the “copyleft” mechanism in the licence by means of a fundamentally a binding contract in which licensor and licensee are granted patent immunity. For the open licensing provisions to be triggered, one must have “active participation in the life of the Documentation or Product” (Ackermann, 2009, p. 208).</p>
+<p>[…] In 2011, the European Organization for Nuclear Research (CERN) released the first version of the CERN Open Hardware licence (CERN OHL) as a TAPR derivative. The CERN OHL was motivated by the need for a legal instrument that is tailored for CERN as a publicly funded, multi-lateral research organisation. Key concepts and provisions in TAPR were kept for CERN OHL, such as the notion of “documentation” to establish the scope of what is to be licensed; and, of great importance, the preservation of the copyleft mechanism inspired by the concept of Free Software (Ayass and Serrano, 2012).</p>
+<p>The third and last provision kept in the formulation of CERN OHL was the patent licensing clause. In collaboration with the IP expert Myriam Ayass from the Knowledge Transfer group at CERN, the OHL was
+designed primarily for transposing reciprocal provisions in the GNU GPL to the domain of hardware. In the words of Ayass’s co-author, CERN engineer Javier Serrano: “we were trying to achieve much more than we had before: the ability for anybody who sees a physical object to trace back to the actual design file […] We are trying to do reciprocal licensing which is much more powerful than just no-IP” (interview, 05/01/2017).</p>
+<p>Another important OH licence was drafted by the legal scholar Eli Greenbaum with a focus on 3D printing: the “Three-Dimensional Printing Open licence” (TDPL). This reciprocal licence draws from other open licences, such a TAPR and CERN OHL, to stipulate provisions for the preservation of attribution and enforcement of access to 3D design documentation. […] The 3D printing case is of particular interest given its focus on 3D design, which implicate copyright infringement when they are copied (without
+authorisation) to the memory of a 3D printer and, then, transformed (sliced) for fabrication. It is this very possibility of triggering copyright restrictions through copying that Greenbaum utilises for establishing the TPDL reciprocal conditions.</p>
+<p>In principle, any object could be designed and fabricated, from flower pots to prosthetic devices, whereas copying (and converting) design files to the 3D printer is functionally necessary, generating a “one-to-one correspondence between the digital file and the object that is actually printed” (Greenbaum, 2012, p. 277) with notable differences with respect to the “resolution” which an object will be rendered by the printing equipment. This is not at all the case for other domains of hardware development, where different techniques as well as end results are involved, such as in “gateware” design with programmable logic devices (FPGAs) and application-specific integrated circuit (ASIC) technologies. This is yet another
+difficulty with respect to hardware: the very nature of the design, fabrication, testing, and distribution channels varies greatly, introducing serious roadblocks for creating a common framework for hardware sharing.</p>
+<p>One of the latest efforts in OH licensing was the “Solderpad licence,” drafted by an attorney with long experience in open licensing, Andrew Katz. In 2010, Katz released a document on a public mailing-list with “tracked changes” on the Apache licence version 2 to create a “permissive” alternative for hardware. His intention was to demonstrate that little modifications would, in fact, be necessary to create a new licence, filling an important gap where reciprocal licences existed, such as TAPR, CERN OHL, and TDPL.</p>
+<p>Solderpad introduced a permissive option in the space of strong copyleft licences (Katz, 2012), allowing hardware licensors to extend the possibility of a particular hardware project to be converted into proprietary technology without the obligation of returning improvements and/or derivative versions to the electronic commons of Free and Open Source (software and hardware) projects. […] The modification of Apache 2.0 text in Solderpad was intended to address the smaller set subset of issues which are relevant in a simple permissive licence. It also included provisions for dealing with patents and trademarks (adopting the Apache 2.0 approach) that are particularly salient in the domain of hardware
+(Katz, 2012, p. 54)</p>
+</div></blockquote>
+</section>
+<section id="what-can-be-licensed">
+<h2>What can be licensed?<a class="headerlink" href="#what-can-be-licensed" title="Permalink to this heading">#</a></h2>
+<p><a class="reference internal" href="#oshlicuse-fig"><span class="std std-numref">Fig. 32</span></a> shows that the practices regarding licensing in OSH communities are still heterogeneous. Even when the recommended licences for OSH, recommended by OSHWA, are the three ones mentioned in the previous section, we still find many software and creative commons licences used (<a class="reference internal" href="#oshlicuse-fig"><span class="std std-numref">Fig. 32</span></a>).</p>
+<figure class="align-default" id="oshlicuse-fig">
+<a class="reference internal image-reference" href="../_images/38.png"><img alt="../_images/38.png" src="../_images/38.png" style="width: 800.0px; height: 500.0px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 32 </span><span class="caption-text">Survey on licences used in OSH communities, 2020<a class="footnote-reference brackets" href="#footcite-oshwasurvey" id="id7" role="doc-noteref"><span class="fn-bracket">[</span>6<span class="fn-bracket">]</span></a></span><a class="headerlink" href="#oshlicuse-fig" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>One reason behind this is that most of the time there is a misunderstanding of what can be licensed and how in OSH. The OSHWA certification program explains these differences by calling to considerate four main components of an OSH project:</p>
+<ul class="simple">
+<li><p>hardware itself,</p></li>
+<li><p>software used to run the hardware (if applicable),</p></li>
+<li><p>documentation,</p></li>
+<li><p>project brand.</p></li>
+</ul>
+<p>As OSH projects contain a mix of different types of material (designs, code, text), you should include multiple licenses, being explicit about which license applies to each part of the project.</p>
+<figure class="align-default" id="iplicence2-fig">
+<a class="reference internal image-reference" href="../_images/35.png"><img alt="../_images/35.png" src="../_images/35.png" style="width: 592.1999999999999px; height: 250.6px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 33 </span><span class="caption-text">Multiple components, multiple licences <a class="footnote-reference brackets" href="#footcite-oshwacert" id="id8" role="doc-noteref"><span class="fn-bracket">[</span>7<span class="fn-bracket">]</span></a>.</span><a class="headerlink" href="#iplicence2-fig" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>If you are interested in certifying your project via the OSHWA program or if you want to learn more about how different regimes apply to different project components, we recommend you to visit the <a class="reference external" href="https://certification.oshwa.org/process.html">OSHWA Certification Program guidelines</a>.</p>
+</section>
+<section id="how-to-choose-a-licence">
+<h2>How to choose a licence<a class="headerlink" href="#how-to-choose-a-licence" title="Permalink to this heading">#</a></h2>
+<p>Choosing an open-source license for your project involves considering the goals you have for your software or hardware and understanding the implications of different license types. Key considerations include whether your priority is to encourage widespread use and adoption, foster collaboration within a community, or ensure that modifications to your project are shared back with the community.</p>
+<p>If your aim is to maximize adoption and use, you might lean towards a permissive license. Permissive licenses, such as the MIT or Apache License for software, or the permissive CERN OHL, allow users to do almost anything they want with your code and designs, including incorporating it into proprietary projects. These licenses offer flexibility and are often chosen for projects with a commercial focus.</p>
+<p>On the other hand, if you want to ensure that improvements or modifications to your project benefit the entire community, you might opt for a copyleft license. Copyleft licenses, like the GNU General Public License (GPL) or the strong CERN OHL, require that derivative works also be open source. This ensures that enhancements and modifications made by others are shared with the community.</p>
+<p>It is also critical to consider the dynamics of your community and ecosystem. If there are existing projects or standards that you want to align with, choosing a license compatible with those projects can facilitate collaboration. Check the compatibility of licenses to avoid potential conflicts when combining code from different sources.</p>
+<p>Think about the level of control you want to retain over the use of your project. Some licenses include clauses that require any modifications or improvements to be contributed back to the community, providing a level of control over the evolution of the project.</p>
+<p>Common elements to think about are:</p>
+<ul class="simple">
+<li><p>Attribution: Should/must original authors be attributed or not?</p></li>
+<li><p>Derivatives: Are derivatives of the project allowed? and if so, how should/must they be shared?</p></li>
+<li><p>Commercialisation: can the project be used for commercial purposes?</p></li>
+<li><p>Appliccations: Is the project allowed to be used in any/all domains (e.g. is there text in the license that prohibits use in potentially harmful applications?)</p></li>
+</ul>
+<p>The following tables (<a class="reference internal" href="#lictable1-fig"><span class="std std-numref">Fig. 34</span></a> &amp; <a class="reference internal" href="#lictable2-fig"><span class="std std-numref">Fig. 35</span></a>, click to enlarge) aim to clarify the differences between licences to facilitate decision-making.</p>
+<figure class="align-default" id="lictable1-fig">
+<a class="reference internal image-reference" href="../_images/39.png"><img alt="../_images/39.png" src="../_images/39.png" style="width: 891.0999999999999px; height: 352.79999999999995px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 34 </span><span class="caption-text">Main features of recommended OSH licences <a class="footnote-reference brackets" href="#footcite-luis2019open" id="id9" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a>.</span><a class="headerlink" href="#lictable1-fig" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<figure class="align-default" id="lictable2-fig">
+<a class="reference internal image-reference" href="../_images/40.png"><img alt="../_images/40.png" src="../_images/40.png" style="width: 894.5999999999999px; height: 385.0px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 35 </span><span class="caption-text">Main features of recommended OSH licences (cont.) <a class="footnote-reference brackets" href="#footcite-luis2019open" id="id10" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a>.</span><a class="headerlink" href="#lictable2-fig" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>We also recommend looking at the website <a class="reference external" href="https://choosealicense.com/">Choose a license</a>, which provides an interactive orientation guide which now includes licences for hardware.</p>
+<embed type="text/html" src="https://choosealicense.com/"  width="100%" height="300px">
+</section>
+<section id="standards-in-osh">
+<h2>Standards in OSH<a class="headerlink" href="#standards-in-osh" title="Permalink to this heading">#</a></h2>
+<p>The adoption of Open Source Hardware (OSH) by businesses is still low, with most OSH production limited to non-commercial sectors: education, NGOs, academia, hobbyists, grassroots communities in science. Compared to Open Source Software (OSS), with a 30-year delay in development, OSH is still niche.</p>
+<p>A key process in growth an expansion is standardization. FOSS counts with standards that are both ​de facto, i.e. adopted in practice by a community but not officially endorsed by a Standard-Setting Organisation (SSO), and ​de jure, ​meaning a specification from a recognised standardisation body​.</p>
+<p>The lack of a consistent identity and widely accepted best practices makes defining and standardizing OSH challenging<a class="footnote-reference brackets" href="#footcite-bonvoisin-2020" id="id11" role="doc-noteref"><span class="fn-bracket">[</span>8<span class="fn-bracket">]</span></a>. It is difficult to draw a straight line between the practices referred to as OSH and other more or less related practices; “openwashing” discourses from industrial practice<a class="footnote-reference brackets" href="#footcite-lund2020profiting" id="id12" role="doc-noteref"><span class="fn-bracket">[</span>9<span class="fn-bracket">]</span></a> also contribute to the confusion.</p>
+<p>Bonvoisin et al. (2020) describes how the definition of hardware changed with time:</p>
+<blockquote>
+<div><p>In the early days of OSH, “hardware” was mainly understood as ​electronic hardware: the hardware on which FOSS would run. In line with this, the first hardware–specific open source license – the TAPR OHL – was designed to protect digital telecommunication devices. Since then, the word ​hardware in OSH has acquired a broader meaning, encompassing diverse technologies beyond electronics, such as mechanics or textile.</p>
+</div></blockquote>
+<section id="legal-aspects-documentation">
+<h3>Legal aspects &amp; documentation<a class="headerlink" href="#legal-aspects-documentation" title="Permalink to this heading">#</a></h3>
+<p>Counting with a consensuated definition enable the alignment of various standards and a minimun benchmark for compliance. Since 2018 OSHWA provides an <strong>OSH self-certification scheme</strong> based on transparent licensing of parts and products; it is of course aligned with the Open Source Hardware definition.</p>
+<p>As a self-certification process that is broadly focused on licensing and aspects of intellectual property, this initiative does not contribute to standardisation of other dimensions of OSH. For example, OSHWA members may ​review the quality of documentation of submitted projects but the criteria used are not formalised, leaving a gap for further standards and certification development.</p>
+<p>The community has worked significantly on <strong>standardizing documentation formats</strong>. Examples include DocuBricks, a documentation standard devised specifically for OSH and with a focus on modularity and interoperability - thus enabling different “bricks” with files and instructions to be combined into one project even with conflicting share-alike licenses. Git Building is a recent initiative, yet without major release, which aims to integrate Open Hardware documentations with Git-based version control repositories. Relying on Markup language, it is easily human readable without additional software, at the expense of modularity and machine readability.</p>
+<p>Major documentation hosting platforms used by OSH projects do not currently use a documentation or content standard, which may either be due to a lack of development effort or due to the preferences of the largely hobbyist-focused community.</p>
+</section>
+<section id="towards-industry-adoption">
+<h3>Towards industry adoption<a class="headerlink" href="#towards-industry-adoption" title="Permalink to this heading">#</a></h3>
+<p><a class="reference external" href="https://www.beuth.de/en/technical-rule/din-spec-3105-1/324805763">DIN SPEC 3105 “Open Source Hardware”</a> is a standardisation effort initiated by Open Source Ecology Germany e.V. and officially launched by the German Standardisation Organisation DIN e.V. (Deutsches Institut für Normung e.V.) April 2019 (DIN 2019). The project was led under DIN’s “Publicly Available Specification” procedure (PAS) delivering a public document that can “be used as a basis for a full standard”. It involves “smaller, more agile working groups” and is an “effective marketing instrument […] widely accepted by customers and potential partners alike”. It is the first de jure​rather than ​de facto​standard developed for OSH.</p>
+<p>This standard contains two parts:</p>
+<p>• DIN SPEC 3105-1 “Open Source Hardware - Requirements for documentation” aimed at delivering an unambiguous definition of the term Open Source Hardware based on objective and enforceable criteria.</p>
+<p>• DIN SPEC 3105-2 “Open Source Hardware - Community-based assessment” builds upon the definitions provided by DIN SPEC 3105-1 to define requirements for an assessment procedure for OSH products based on reviews by OSH community members – emulating the model of peer-review used in scientific publishing.</p>
+<p>The main contributions of the standard include:</p>
+<ul class="simple">
+<li><p>Breaking down the OSHWA Definition 1.0 into clear, actionable ways to meet that requirement in terms of documentation content,</p></li>
+<li><p>Acknowledging that OSH is not only a matter of licensing but also a matter of documentation contents,</p></li>
+<li><p>Acknowledging that the content of the documentation to be shared depends on the hardware technologies embedded in the product under consideration (e.g. electronic hardware),</p></li>
+<li><p>Acknowledging that the content of the documentation also depends on the audience targeted by the documentation,</p></li>
+<li><p>Adopting a product life cycle perspective, considering that “making” a product is not only about manufacturing it, it is also about using, maintaining, updating and processing it at end-of-life.</p></li>
+</ul>
+<p>The first release of DIN SPEC 3015 was published in April 2020. It is the first German standard to be published under an open license (CC-BY-SA 4.0) and to implement an open standardisation process. Viewing and using the standard is thus possible without costly licenses or permission from DIN e.V. or any further restrictions apart from copyleft and DIN’s trademark protection. The open process also provides a mechanism for the OSH community to adjust the standard to their needs in future versions.</p>
+</section>
+<section id="increasing-discoverability">
+<h3>Increasing discoverability<a class="headerlink" href="#increasing-discoverability" title="Permalink to this heading">#</a></h3>
+<p>The <a class="reference external" href="https://www.internetofproduction.org/openknowhow">Open Know-How Manifest Specification</a> is an initiative from the Open Know-How Working Group, who focuses on standardised protocols for the exchange of Open Hardware related information online. The initiative is based on the observation that Open Hardware requires new networks of tools and information in order to ensure that users can find and access appropriate hardware designs, local physical tools to make them, and potentially customers to sell units to.</p>
+<p>Established in 2019, it brings together a number of members from academia, NGOs, companies and OSH community groups with the objective of issuing standards to address three levels of sharing documentation information (Know-How) on OSH:</p>
+<ol class="arabic simple">
+<li><p>discoverability, i.e. the ability to find the documentation regardless of where it resides on the internet, in part through making documentation accessible to web crawlers;</p></li>
+<li><p>portability, i.e. the ability to share documentation on different platforms or to transfer it from one platform to another;</p></li>
+<li><p>platform interoperability, i.e. the ability to update, relate and join documentations across different online repositories and documentation formats.</p></li>
+</ol>
+<p>The first standard released by the working group is the Open Know-How Manifest Specification 1.08 addressing discoverability ​(Open Know How Working Group 2019)​. The working principle of this standard is creating an additional file, called a “manifest”, for each Open Hardware documentation, which contains metadata relative to the documentation and to other files commonly shared next to hardware documentation, e.g. the applying license terms and the “readme” file.</p>
+<p>The standard intends to promote discoverability of open source hardware by establishing a machine-readable format which enables search engines and web crawlers to index open source hardware documentation metadata from the internet. A demonstrator of such an index is provided by the working group. It gathers metadata from approx. 400 pieces of hardware and make them available in a single URL9. The manifest file may be written by hand by the authors or it may be auto generated by documentation repositories if the corresponding documentation is sufficiently structured, e.g. in the DocuBricks format, to assess its content automatically. The manifest file links to the documentation and can be thus placed anywhere online, in the documentation repository or in another dedicated location.</p>
+<p>The standard delivers a template formatted in YAML markup language which is both machine-readable and easy to modify for non-expert users. The manifest file covers the following metadata:</p>
+<ul class="simple">
+<li><p>basic information such as contact person, licence, language and the locations of (i.e. links to) documentation, bill of materials and project homepage</p></li>
+<li><p>descriptive information such as intended use, keywords and development stage</p></li>
+<li><p>locations of (links to) some more advanced information such as risk assessments, quality control, or maintenance protocols;</p></li>
+<li><p>the ability to make basic relationships between OSH items more transparent e.g. by using “version”, “variant-of” and the relationship term “derivative-of” to indicate that the design is derived from another and providing a link to that documentation.</p></li>
+</ul>
+<p>This content makes manifest files fully compatible with the requirements from DIN SPEC 3105. The project has set a goal of 500 OSH projects adopting the Open Know-How Manifests by end of 2020 and is actively recruiting projects to publish a manifest and index it in their demonstrator10. Like DIN SPEC 3105, the standard has been a collaborative effort. It has open channels on the open standard editing platform StandardsRepo11 where feedback and improvements can be suggested by raising an issue or proposal.</p>
+<p>The manifest may be the first a series of standards from the Open Know-How Group aimed at building an “Internet of Production”, a network enabled by open exchange protocols to locally share and access Open Hardware documentation, as well as needed tools and the information how to use those. This essential infrastructure for Open Hardware may be aided by the creation of appropriate standards which ensure that diverse projects and platforms can exchange information effectively, and to avoid potential vendor lock-ins for the online infrastructure on which the community relies.</p>
+</section>
+</section>
+<section id="slides-for-download">
+<h2>Slides for download<a class="headerlink" href="#slides-for-download" title="Permalink to this heading">#</a></h2>
+<p><a class="reference download internal" download="" href="../_downloads/e1588c7f65eff71d6a6c1bcf36cef21e/OSHS_unit6.pdf"><span class="xref download myst">Link to slides</span></a></p>
+</section>
+<section id="bibliography">
+<h2>Bibliography<a class="headerlink" href="#bibliography" title="Permalink to this heading">#</a></h2>
+<div class="docutils container" id="id13">
+<aside class="footnote brackets" id="footcite-luis2019open" role="note">
+<span class="label"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></span>
+<span class="backrefs">(<a role="doc-backlink" href="#id1">1</a>,<a role="doc-backlink" href="#id6">2</a>,<a role="doc-backlink" href="#id9">3</a>,<a role="doc-backlink" href="#id10">4</a>)</span>
+<p>Murillo Luis Felipe R, Pietari Kauttu, Pujol Priego Laia, Wareham Jonathan, and Katz Andrew. Open hardware licences: parallels and contrasts: open science monitor case study. 2019.</p>
+</aside>
+<aside class="footnote brackets" id="footcite-beldiman2018bits" role="note">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id2">2</a><span class="fn-bracket">]</span></span>
+<p>Dana Beldiman. From bits to atoms: does the open source software model translate to open source hardware. <em>Santa Clara High Tech. LJ</em>, 35:23, 2018.</p>
+</aside>
+<aside class="footnote brackets" id="footcite-chae2014" role="note">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id3">3</a><span class="fn-bracket">]</span></span>
+<p>Boyoung Chae. Difference between open license, public domain and all rights reserved copyright. 2014. URL: <a class="reference external" href="https://commons.wikimedia.org/wiki/File:Difference_between_open_license,_public_domain_and_all_rights_reserved_copyright.png">https://commons.wikimedia.org/wiki/File:Difference_between_open_license,_public_domain_and_all_rights_reserved_copyright.png</a>.</p>
+</aside>
+<aside class="footnote brackets" id="footcite-rjjiii2023" role="note">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id4">4</a><span class="fn-bracket">]</span></span>
+<p>Rjjiii. Most popular open source software licences in 2021 based on a survey by mend.io. 2023. URL: <a class="reference external" href="https://en.wikipedia.org/wiki/Open-source_license#/media/File:Open-source-license-chart.svg">https://en.wikipedia.org/wiki/Open-source_license#/media/File:Open-source-license-chart.svg</a>.</p>
+</aside>
+<aside class="footnote brackets" id="footcite-the-turing-way-community-2023-7625728" role="note">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id5">5</a><span class="fn-bracket">]</span></span>
+<p>The Turing Way Community. The Turing Way: A handbook for reproducible, ethical and collaborative research. <em>.</em>, February 2023. URL: <a class="reference external" href="https://doi.org/10.5281/zenodo.7625728">https://doi.org/10.5281/zenodo.7625728</a>, <a class="reference external" href="https://doi.org/10.5281/zenodo.7625728">doi:10.5281/zenodo.7625728</a>.</p>
+</aside>
+<aside class="footnote brackets" id="footcite-oshwasurvey" role="note">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id7">6</a><span class="fn-bracket">]</span></span>
+<p>Open Source Hardware Association. Open source hardware community survey. 2020. URL: <a class="reference external" href="https://www.oshwa.org/2020/10/16/oshw-community-survey-2020/">https://www.oshwa.org/2020/10/16/oshw-community-survey-2020/</a>.</p>
+</aside>
+<aside class="footnote brackets" id="footcite-oshwacert" role="note">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id8">7</a><span class="fn-bracket">]</span></span>
+<p>Open Source Hardware Association. Open source hardware certification program. URL: <a class="reference external" href="https://certification.oshwa.org/process/hardware.html">https://certification.oshwa.org/process/hardware.html</a>.</p>
+</aside>
+<aside class="footnote brackets" id="footcite-bonvoisin-2020" role="note">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id11">8</a><span class="fn-bracket">]</span></span>
+<p>Jérémy Bonvoisin, Jenny Molloy, Martin Häuer, and Tobias Wenzel. Standardisation of practices in open source hardware. <em>Journal of Open Hardware</em>, Aug 2020. <a class="reference external" href="https://doi.org/10.5334/joh.22">doi:10.5334/joh.22</a>.</p>
+</aside>
+<aside class="footnote brackets" id="footcite-lund2020profiting" role="note">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id12">9</a><span class="fn-bracket">]</span></span>
+<p>Arwid Lund, Mariano Zukerfeld, Arwid Lund, and Mariano Zukerfeld. Profiting from free and open source software. <em>Corporate Capitalism’s Use of Openness: Profit for Free?</em>, pages 109–147, 2020.</p>
+</aside>
+</div>
+<hr class="footnotes docutils" />
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./contents"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="week5.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">5. Documenting for reuse</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="week7.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">7. Emerging business models</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-an-open-source-licence">What is an open source licence?</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#public-domain-open-source">Public domain, open-source…</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#approaches-to-licensing">Approaches to licensing</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#licences-in-osh">Licences in OSH</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-can-be-licensed">What can be licensed?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#how-to-choose-a-licence">How to choose a licence</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#standards-in-osh">Standards in OSH</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#legal-aspects-documentation">Legal aspects &amp; documentation</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#towards-industry-adoption">Towards industry adoption</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#increasing-discoverability">Increasing discoverability</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#slides-for-download">Slides for download</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#bibliography">Bibliography</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Julieta Arancio, Robert Mies - Licensed CC-BY 4.0
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=5b4479735964841361fd"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
