@@ -1,8 +1,8 @@
 # Book settings
 # Learn more at https://jupyterbook.org/customize/config.html
 
-title: My sample book
-author: The Jupyter Book Community
+title: Open Source Hardware Seminar @TU Berlin 2023
+author: Julieta Arancio, Robert Mies - Licensed CC-BY 4.0
 logo: logo.png
 
 # Force re-execution of notebooks on each build.
@@ -21,7 +21,7 @@ bibtex_bibfiles:
 
 # Information about where the book exists on the web
 repository:
-  url: https://github.com/executablebooks/jupyter-book  # Online location of your book
+  url: https://github.com/thesaly/OSHS-2023  # Online location of your book
   path_to_book: docs  # Optional path to your book, relative to the repository root
   branch: master  # Which branch of the repository should be used when creating links (optional)
 
@@ -30,3 +30,16 @@ repository:
 html:
   use_issues_button: true
   use_repository_button: true
+
+sphinx:
+    html_context:
+        default_mode: dark
+    config:
+        html_show_copyright: false
+        bibtex_reference_style: author_year
+
+parse:
+  myst_enable_extensions:
+    # don't forget to list any other extensions you want enabled,
+    # including those that are enabled by default!
+    - html_admonition
