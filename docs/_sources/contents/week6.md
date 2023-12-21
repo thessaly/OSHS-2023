@@ -257,8 +257,6 @@ This content makes manifest files fully compatible with the requirements from DI
 
 The manifest may be the first a series of standards from the Open Know-How Group aimed at building an "Internet of Production", a network enabled by open exchange protocols to locally share and access Open Hardware documentation, as well as needed tools and the information how to use those. This essential infrastructure for Open Hardware may be aided by the creation of appropriate standards which ensure that diverse projects and platforms can exchange information effectively, and to avoid potential vendor lock-ins for the online infrastructure on which the community relies.
 
-## Slides for download
-[Link to slides](slides/OSHS_unit6.pdf)
 
 ## Bibliography
 ```{footbibliography}

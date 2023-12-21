@@ -129,9 +129,6 @@ The open source product development process: for companies (part 2) {footcite}`m
 
 This kind of flexibility combined with the technical capabilities needed is indeed mostly found in mature small and medium enterprises as well as some highly focussed and innovative start-ups. Corporate organisational structures are much more streamlined, so this clash of paradigms can quickly prove to be an unmanageable stretch for them and may require separate operational spheres and structures.
 
-## Slides for download
-[Link to slides](slides/OSHS_unit4.pdf)
-
 ## Bibliography
 ```{footbibliography}
 ```

@@ -260,10 +260,6 @@ The system allows for connection with a wide range of third-party sensors throug
 
 A research paper in HardwareX{footcite}`camprodon2019smart` describes the hardware for both the Smart Citizen Kit and the Smart Citizen Station. The project builds on the legacy of previous generations of the Smart Citizen project and has been developed as part of the of iSCAPE (Improving Smart Control of Air Pollution in Europe) project, which is funded by the European Community’s H2020 Programme.
 
-## Slides for download
-
-[Link to slides](slides/OSHS_units1and2.pdf)
-
 ## Bibliography
 ```{footbibliography}
 ```

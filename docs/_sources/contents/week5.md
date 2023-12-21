@@ -136,9 +136,6 @@ Making open hardware citable is indeed useful for academic and research output. 
 
 The following documentation checklists may orient you when starting your project documentation: [Technical documentation contents](slides/OSHS_unit5_checklist.pdf). They are categorized into process documentation and product documentation.
 
-## Slides for download
-[Link to slides](slides/OSHS_unit5.pdf)
-
 ## Bibliography
 ```{footbibliography}
 ```

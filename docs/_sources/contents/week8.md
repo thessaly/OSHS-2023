@@ -178,9 +178,6 @@ name: oshcollab2-fig
 Implications of model choice in everyday practice
 ```
 
-## Slides for download
-[Link to slides](slides/OSHS_unit8.pdf)
-
 ## Bibliography
 ```{footbibliography}
 ```

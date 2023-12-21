@@ -140,8 +140,6 @@ The Open Hardware canvas is a tool for visualizing the core components of an OSH
 
 The following units dive deeper into each of these components. If the project you are working on with the practice partner involves hardware prototyping, it is convenient for you to draft a first version of the OH canvas which we will review as the project advances.
 
-## Slides for download
-[Link to slides](slides/OSHS_unit3.pdf)
 
 ## Bibliography
 ```{footbibliography}

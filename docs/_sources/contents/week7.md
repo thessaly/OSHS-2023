@@ -145,10 +145,6 @@ Under this model, the customer is approached by an intermediary organization (or
 
 Here, the supplier is not just a WR manufacturing firm but offers consulting, support and services. But due to the uniqueness of each client, and the vast diversity of sectors and business applications of the technology, suppliers are still struggling to “package” or standardize their services around WR.
 
-
-## Slides for download
-[Link to slides]()
-
 ## Bibliography
 ```{footbibliography}
 ```
